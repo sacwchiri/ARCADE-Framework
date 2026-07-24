@@ -1,4 +1,5 @@
-# Game development agentic workflow guides
+# ARCADE - Framework
+## Agentic Roles for Collaborative Art, Development & Engineering
 
 This pack defines a small-team, game-production-oriented agentic workflow for OpenCode.
 
