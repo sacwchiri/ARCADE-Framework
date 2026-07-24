@@ -1,47 +1,27 @@
-# Project Agent Operating Rules
+# Repository Instructions
 
-This project uses role-specific OpenCode agents under `.opencode/agents/`.
+This repository is an OpenCode workflow/documentation pack, not the game project that consumes it. Role definitions live in `.opencode/agents/`; workflows and protocols there are the source of truth for process details. Consuming projects start without a seeded `docs/` directory; workflows create project documentation on demand.
 
-## Default workflow
+## Workflow
 
-1. Concept intake
-2. Document selection
-3. Pre-production planning
-4. Blind spot review
-5. Production slice planning
-6. Human slice validation
-7. Specialty implementation
-8. Integration
-9. Validation and playtesting
-10. Ticket generation
-11. Documentation curation
+Use the smallest relevant path: concept -> pre-production -> slice planning -> approved execution -> integration -> validation/playtest -> ticketing -> documentation curation. Do not skip approval gates when direction, scope, architecture, visual target, or acceptance is changing.
 
-## Core human checkpoints
+## Human authority
 
-Humans must approve or answer:
+Humans own core fantasy, pillars, audience/platform, scope changes, visual and feel quality, slice plan, playtest interpretation, prototype promotion, and release readiness. Agents may recommend and implement approved decisions, but must ask concrete questions rather than silently changing them.
 
-- concept brief direction
-- game pillars
-- visual direction
-- production slice strategy
-- major technical tradeoffs
-- prototype promotion to production
-- interpretation of playtest results
-- release readiness
+## Editing rules
 
-## Review placement
+- Planning agents do not edit implementation code; prototype code must be explicitly labeled.
+- Implementation agents must read the approved task and relevant design/technical docs, inspect existing content, edit only approved scope, and run available checks.
+- If behavior, architecture, visual direction, or scope must change, stop and escalate before editing beyond the approved task.
+- Every handoff should identify source-of-truth docs, changed files, decisions, assumptions, deviations, risks, human decisions, and the next step; use `.opencode/protocols/handoff.md`.
+- Create only documents with a reader, owner, and supported decision/workflow. When documentation is first needed, create `docs/`, the required domain folder, and its `README.md`; update that index when documents are added, renamed, or obsolete.
 
-Small reviews should be added directly inside the reviewed document under `Review Notes`.
+## Reviews and tickets
 
-Large cross-domain reviews should go under `/docs/reviews/`.
+Put small reviews under `Review Notes` in the reviewed document; create `docs/reviews/` when a cross-domain review is needed. Use the ticket workflow (`//ticket`) for bugs, playtest observations, failed expectations, or other issues; create `docs/production/tickets/` when tickets are first needed.
 
-## Ticket command
+## Tooling
 
-Use `//ticket` to convert a bug, playtest observation, failed expectation, or issue into a structured ticket under `/docs/production/tickets/`.
-
-## Agent safety
-
-Planning agents should not edit source code.
-Prototype code must be clearly labeled.
-Implementation agents must read approved design and technical docs before editing.
-Agents must separate decisions, assumptions, risks, open questions, and human decisions needed.
+There is no root build, test, lint, or typecheck command. The only package manifest is `.opencode/package.json`, which declares the OpenCode plugin dependency; do not invent application commands for this repository.

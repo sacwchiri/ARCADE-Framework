@@ -1,0 +1,76 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "concept",
+  "instructions": [".opencode/docs/csharp-unity-engineering.md"],
+  "references": {
+    "project-docs": {
+      "path": "docs",
+      "description": "All project source-of-truth documentation"
+    },
+    "concept-docs": {
+      "path": "docs/concept",
+      "description": "Concept direction, visual candidates, and concept handoffs"
+    },
+    "product-docs": {
+      "path": "docs/product",
+      "description": "Pillars, scope boundaries, and product decisions"
+    },
+    "design-docs": {
+      "path": "docs/design",
+      "description": "Approved design requirements, systems, and prototypes"
+    },
+    "production-docs": {
+      "path": "docs/production",
+      "description": "Approved slices, production tasks, dependencies, and acceptance criteria"
+    },
+    "technical-docs": {
+      "path": "docs/technical",
+      "description": "Architecture, compatibility, persistence, and testing contracts"
+    },
+    "validation-docs": {
+      "path": "docs/validation",
+      "description": "Validation plans, playtests, acceptance reports, and evidence"
+    },
+    "content-docs": {
+      "path": "docs/content",
+      "description": "Content schemas, catalogues, recipes, and economy contracts"
+    },
+    "levels-docs": {
+      "path": "docs/levels",
+      "description": "Level, chunk, and spatial construction documentation"
+    },
+    "ux-docs": {
+      "path": "docs/ux",
+      "description": "Player flows, interaction, accessibility, and UI requirements"
+    },
+    "art-docs": {
+      "path": "docs/art",
+      "description": "Art direction, visual rules, and asset requirements"
+    },
+    "audio-docs": {
+      "path": "docs/audio",
+      "description": "Audio direction, feedback plans, and event matrices"
+    },
+    "review-docs": {
+      "path": "docs/reviews",
+      "description": "Cross-domain architecture, concept, and readiness reviews"
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow"
+    },
+    "external_directory": "deny"
+  },
+  "plugin": ["opencode-gpt-imagegen"],
+  "mcp": {
+    "unityMCP": {
+      "type": "remote",
+      "url": "http://127.0.0.1:8090/mcp",
+      "enabled": true
+    }
+  }
+}

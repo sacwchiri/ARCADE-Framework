@@ -1,0 +1,37 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "concept",
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "edit": "allow",
+    "bash": {
+      "*": "ask",
+      "pwd": "allow",
+      "ls *": "allow",
+      "find *": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "npm test*": "allow",
+      "pnpm test*": "allow",
+      "dotnet test*": "allow",
+      "pytest*": "allow",
+      "rm *": "deny",
+      "git reset*": "deny"
+    },
+    "websearch": "allow",
+    "webfetch": "allow",
+    "question": "allow"
+  },
+  "plugin": ["opencode-gpt-imagegen"],
+  "mcp": {
+    "unityMCP": {
+      "type": "remote",
+      "url": "http://127.0.0.1:8090/mcp",
+      "enabled": true
+    }
+  }
+}

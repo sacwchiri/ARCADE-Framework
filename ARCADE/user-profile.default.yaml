@@ -1,0 +1,58 @@
+schema_version: 1
+
+# Safe baseline for a new project. The user may replace this with the ignored
+# user-profile.local.yaml file in the consuming project's .opencode directory.
+user:
+  display_name: ""
+  # solo_dev, team_contributor, or hybrid_contributor
+  working_context: solo_dev
+
+disciplines:
+  engineering:
+    strength: unknown
+    guidance_needed: adaptive
+  art_2d:
+    strength: unknown
+    guidance_needed: adaptive
+  art_3d:
+    strength: unknown
+    guidance_needed: adaptive
+  technical_art:
+    strength: unknown
+    guidance_needed: adaptive
+  design:
+    strength: unknown
+    guidance_needed: adaptive
+  production:
+    strength: unknown
+    guidance_needed: adaptive
+  validation:
+    strength: unknown
+    guidance_needed: adaptive
+
+preferences:
+  guidance:
+    technical_depth: adaptive
+    cross_discipline_support: high
+    explanation_style: concise_with_context
+  output:
+    prefer_reusable_solutions: true
+    prefer_visual_variations_over_final_art: true
+    prefer_prototypes_before_architecture: true
+
+# These settings add review requirements. They cannot remove global human
+# approval gates defined by ARCADE protocols.
+ownership:
+  final_design: human
+  final_visual_direction: human
+  final_art_selection: human
+  implementation_details: collaborative
+
+workflow:
+  default_discipline: design
+  require_blind_spot_review: true
+  require_profile_review_suggestions: true
+
+# A human may record accepted or rejected review observations here. The Profile
+# Reviewer does not rewrite the profile silently.
+observations: []
