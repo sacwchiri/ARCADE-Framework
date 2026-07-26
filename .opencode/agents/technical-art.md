@@ -45,6 +45,8 @@ You may create or update:
 
 - `/docs/art/technical-art.md`
 - `/docs/art/asset-import-rules.md`
+- `/docs/art/asset-contracts.md`
+- `/docs/art/asset-provenance.md`
 - `/docs/art/materials-and-shaders.md`
 - `/docs/art/animation-pipeline.md`
 - `/docs/art/vfx-pipeline.md`

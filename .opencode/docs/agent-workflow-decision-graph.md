@@ -10,10 +10,11 @@ This graph describes the capabilities present in this repository. It does not as
 
 Implemented in `.opencode/`:
 
-- 26 role-specific agents covering direction, design, production, implementation, integration, and validation.
+- 27 role-specific agents covering direction, design, production, implementation, integration, validation, and controlled external-tool access.
 - Workflows for concept, pre-production, production planning, production execution, integration, validation, and ticket generation.
 - A primary Studio Orchestrator, status workflow, and documentation-curation workflow.
 - Slash-command wrappers under `.opencode/commands/` for each documented workflow entry point.
+- Lazy tool routing through the Tool Controller, capability registry, and compact artifact handoffs.
 - Protocols for document selection, decision authority, human interactions, review gates, slice planning, handoffs, playtests, and definition of done.
 - Documentation areas for concept, product, design, technical, art, UX, content, audio, narrative, levels, production, validation, release, and live ops.
 
@@ -54,7 +55,7 @@ flowchart TD
     E --> E1[Select only needed domain documents]
     E1 --> E2[Prove highest-risk assumptions]
     E2 --> E3[Prototype Implementation, if a throwaway proof is needed]
-    E2 --> E4[Architecture, art/UX/content/audio/levels planning as needed]
+    E2 --> E4[Architecture, art/UX/content/audio/levels/tool planning as needed]
     E3 --> E5[Validation + Blind Spot Review]
     E4 --> E5
     E5 --> H2{Human accepts prototype result and technical / visual tradeoffs?}
@@ -73,9 +74,11 @@ flowchart TD
     P1 --> GI[Gameplay / Backend / Unity Client]
     P1 --> UI[UI / Tools / Content Pipeline]
     P1 --> AS[Art Integration / Audio Integration / VFX Integration]
+    P1 --> TC[Tool Controller, only for approved external capabilities]
     GI --> I[Integration workflow]
     UI --> I
     AS --> I
+    TC --> I
     P --> P2[Build/DevOps when build or CI work is approved]
     P2 --> I
 
@@ -114,6 +117,7 @@ flowchart TD
 |---|---|---|---|
 | Raw idea or unclear feature | `concept.md` | Director, Systems Designer, UX, Art Director, Content Designer, Technical Architect | Concept direction, pillars, scope, visual direction, proceed decision |
 | Known concept with risky assumptions | `preproduction.md` | Prototype Implementation, Technical Art, Audio, Narrative, Level/Encounter | Risk priority, prototype result, tradeoffs, production readiness |
+| Art request or visual asset candidate | `art-pipeline.md` / `/art-pipeline` | Art Director, UX, Technical Art, Tool Controller, Art Integration, Validation | Visual direction, licensing, generated output, promotion to production |
 | Approved direction without playable increments | `production-planning.md` | Production Planner, domain agents, Blind Spot Reviewer | Slice count/order and first playable target |
 | Approved slice/task | `production-execution.md` | Gameplay, Backend, Unity, UI, Tools, Content Pipeline, Build/DevOps, Art/Audio/VFX Integration | Scope/behavior changes, prototype promotion, final feel |
 | Parallel work needs to connect | `integration.md` | Technical Architect, Systems, UX, Technical Art, Audio, Validation | Ownership conflicts, taste/fun acceptance |
@@ -136,9 +140,12 @@ Agents may recommend structure, technical approaches, slices, tasks, checks, and
 
 The workflow documents are the process source of truth. The executable entry
 points are thin OpenCode command definitions under `.opencode/commands/`; each
-command targets `studio-orchestrator` and passes `$ARGUMENTS`. The orchestrator
+The command targets `studio-orchestrator` and passes `$ARGUMENTS`. The orchestrator
 reads the selected workflow, delegates to the smallest relevant specialist
 team, and preserves the human approval gates defined by that workflow.
+
+The Tool Controller is a broker for capability-scoped external tools. Provider
+credentials and project-specific MCP configuration remain outside this pack.
 
 ## Review Notes
 

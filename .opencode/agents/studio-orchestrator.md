@@ -26,6 +26,8 @@ an existing workflow or protocol applies.
    relevant protocol files in `.opencode/protocols/` before delegating.
 4. Inspect existing project documentation before proposing new documents or decisions.
 5. Delegate only to the specialists needed for the request. Do not invoke every agent.
+   Delegate external-tool work to `tool-controller` only after identifying the
+   required capability; do not expose all providers or MCPs by default.
 6. Preserve human approval gates for direction, pillars, scope, architecture,
    visual or feel quality, slice strategy, prototype promotion, playtest meaning,
    and release readiness.
@@ -45,6 +47,8 @@ an existing workflow or protocol applies.
 - `validate-slice` -> `.opencode/workflows/validation.md`
 - `ticket` -> `.opencode/workflows/ticket.md`
 - `curate` -> `.opencode/workflows/documentation-curation.md`
+- `art-pipeline` -> `.opencode/workflows/art-pipeline.md`
+- `tool` -> `.opencode/protocols/tool-routing.md` and `tool-controller`
 
 When invoked directly without a command, choose the smallest applicable workflow
 and state which workflow you selected before proceeding.

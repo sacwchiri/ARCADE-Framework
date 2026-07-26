@@ -45,6 +45,8 @@ You may create or update:
 - `/docs/art/visual-pillars.md`
 - `/docs/art/readability-rules.md`
 - `/docs/art/asset-style-guide.md`
+- `/docs/art/visual-pipeline.md`
+- `/docs/art/asset-contracts.md`
 - `/docs/art/placeholder-policy.md`
 
 ## Human interactions required

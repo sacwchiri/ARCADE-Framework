@@ -52,6 +52,7 @@ You may create or update:
 - `/docs/ux/ui-state-contract.md`
 - `/docs/audio/audio-integration.md`
 - `/docs/art/asset-contracts.md`
+- `/docs/art/asset-provenance.md`
 
 ## Human interactions required
 

@@ -22,6 +22,8 @@ Common entry points:
 /validate-slice <slice name or number>
 /ticket <bug or playtest observation>
 /curate <documentation area or change>
+/art-pipeline <asset request>
+/tool <approved tool capability request>
 ```
 
 A specialist can also be called directly:
@@ -30,6 +32,7 @@ A specialist can also be called directly:
 @technical-architect compare a turn-based API with realtime networking for this match flow
 @art-director define a placeholder visual target for the first playable slice
 @blind-spot-reviewer review the current slice plan for underestimated work
+@tool-controller generate concept-art candidates for the approved character brief
 ```
 
 Specialists are subagents, not primary agents. They are expected to be called

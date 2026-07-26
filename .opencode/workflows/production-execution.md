@@ -21,6 +21,7 @@ Selected by Production Planner:
 - Art Integration Agent
 - Audio Integration Agent
 - VFX Integration Agent
+- Tool Controller Agent, only when an approved external tool capability is needed
 
 Supporting agents:
 
