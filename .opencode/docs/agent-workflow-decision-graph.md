@@ -12,6 +12,8 @@ Implemented in `.opencode/`:
 
 - 26 role-specific agents covering direction, design, production, implementation, integration, and validation.
 - Workflows for concept, pre-production, production planning, production execution, integration, validation, and ticket generation.
+- A primary Studio Orchestrator, status workflow, and documentation-curation workflow.
+- Slash-command wrappers under `.opencode/commands/` for each documented workflow entry point.
 - Protocols for document selection, decision authority, human interactions, review gates, slice planning, handoffs, playtests, and definition of done.
 - Documentation areas for concept, product, design, technical, art, UX, content, audio, narrative, levels, production, validation, release, and live ops.
 
@@ -19,7 +21,6 @@ Not implemented as workflows:
 
 - Release readiness/distribution workflow.
 - Live-ops operations workflow.
-- Automated orchestration command definitions referenced by `USAGE.md` (the repository contains no `.opencode/commands/` files).
 - Game-specific source code, tests, assets, engine project, build configuration, telemetry, economy, or incident tooling.
 
 ## Decision graph
@@ -133,10 +134,14 @@ Agents may recommend structure, technical approaches, slices, tasks, checks, and
 
 ## Implementation note
 
-The graph is currently a routing document, not an executable orchestrator. To make it executable, add command definitions (for example `/workflow-status`, `/concept`, `/preproduction`, `/plan-slices`, `/execute-slice`, `/integrate-slice`, `/validate-slice`, `/ticket`, and `/curate`) and later add dedicated release and live-ops workflows.
+The workflow documents are the process source of truth. The executable entry
+points are thin OpenCode command definitions under `.opencode/commands/`; each
+command targets `studio-orchestrator` and passes `$ARGUMENTS`. The orchestrator
+reads the selected workflow, delegates to the smallest relevant specialist
+team, and preserves the human approval gates defined by that workflow.
 
 ## Review Notes
 
-- Status: Needs human decision.
-- The repository supports the development lifecycle through validation and ticketing. It does not yet define repeatable release or live-ops routing.
-- Human decision needed: confirm whether release and live-ops should be added as first-class workflows, and whether the referenced commands should be implemented in `.opencode/commands/`.
+- Status: Active; release and live-ops remain capability gaps.
+- The repository supports repeatable routing from workflow status through documentation curation. It does not yet define release or live-ops workflows.
+- Human decision needed: confirm whether release and live-ops should be added as first-class workflows.

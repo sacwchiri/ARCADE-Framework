@@ -1,6 +1,6 @@
 # Workflow: Ticket Generation
 
-Use this workflow when the user writes `//ticket` or asks to convert an issue, bug, playtest note, failed expectation, or observation into actionable work.
+Use this workflow when the user invokes `/ticket`, writes `//ticket`, or asks to convert an issue, bug, playtest note, failed expectation, or observation into actionable work.
 
 ## Owner
 

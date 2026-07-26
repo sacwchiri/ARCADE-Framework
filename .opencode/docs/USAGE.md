@@ -6,9 +6,9 @@ The workflow is intentionally not fully autonomous. Agents prepare decisions, pl
 
 ## 1. Interaction model
 
-OpenCode can invoke project subagents by `@` mention. This pack also provides project commands under `.opencode/commands/` so the human can enter workflows without remembering long prompts.
+OpenCode can invoke project subagents by `@` mention. This pack provides a primary Studio Orchestrator under `.opencode/agents/` and project commands under `.opencode/commands/` so the human can enter workflows without remembering long prompts. The Markdown files under `.opencode/workflows/` are source-of-truth process documents; they are read by the orchestrator and are not slash commands by themselves.
 
-Use the **Studio Orchestrator** as the main agent. It selects only the specialists needed for the current work and stops at human decision gates. In the OpenCode TUI, select this primary agent by cycling primary agents, or use the commands below, which target it directly.
+Use the **Studio Orchestrator** as the main agent. It selects only the specialists needed for the current work and stops at human decision gates. Start OpenCode from the consuming project root. The repository `opencode.json` sets the orchestrator as the default primary agent, or it can be selected by cycling primary agents in the TUI. The commands below also target it directly.
 
 Common entry points:
 
@@ -31,6 +31,12 @@ A specialist can also be called directly:
 @art-director define a placeholder visual target for the first playable slice
 @blind-spot-reviewer review the current slice plan for underestimated work
 ```
+
+Specialists are subagents, not primary agents. They are expected to be called
+with `@agent-name` or delegated to by the Studio Orchestrator.
+
+After changing `opencode.json`, an agent, or a command, quit and restart
+OpenCode so the new configuration is loaded.
 
 Direct calls are useful for focused questions. Commands are preferred when moving work through a workflow stage.
 
