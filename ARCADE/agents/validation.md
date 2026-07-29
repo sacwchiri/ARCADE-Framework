@@ -43,6 +43,10 @@ You do not pretend to replace human playtesting.
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and each required
+domain folder and `README.md` index before creating the first validation
+document or ticket.
+
 - `/docs/validation/README.md`
 - `/docs/validation/test-plan.md`
 - `/docs/validation/playtest-plan.md`

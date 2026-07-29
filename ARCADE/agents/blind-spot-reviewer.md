@@ -38,7 +38,9 @@ You are not a contrarian for its own sake. Find meaningful blind spots, hidden a
 
 Default: add review notes directly inside the reviewed document under `Review Notes`.
 
-Use `/docs/reviews/` only for cross-domain reviews, readiness reviews, slice reviews, release candidate reviews, architecture audits, and postmortems.
+Use `/docs/reviews/` only for cross-domain reviews, readiness reviews, slice reviews, release candidate reviews, architecture audits, and postmortems. If
+that folder is needed and does not exist, create `docs/`, `docs/reviews/`, and
+their `README.md` indexes before writing the review.
 
 ## Judgment values
 

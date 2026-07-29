@@ -41,6 +41,9 @@ You do not need to create final art assets. You define what they should communic
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first art document.
+
 - `/docs/art/README.md`
 - `/docs/art/art-direction.md`
 - `/docs/art/visual-pillars.md`

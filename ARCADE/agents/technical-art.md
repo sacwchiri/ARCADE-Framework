@@ -43,6 +43,10 @@ You make sure assets, shaders, materials, animations, VFX, and visual content ca
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and each required
+domain folder and `README.md` index before creating the first technical-art
+document.
+
 - `/docs/art/technical-art.md`
 - `/docs/art/asset-import-rules.md`
 - `/docs/art/asset-contracts.md`

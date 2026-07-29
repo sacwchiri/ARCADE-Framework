@@ -10,6 +10,10 @@ Validation Agent.
 
 `/docs/production/tickets/`
 
+If the project has no `docs/` directory or ticket index yet, create `docs/`,
+`docs/production/`, `docs/production/tickets/`, and the corresponding
+`README.md` indexes before creating the first ticket.
+
 ## Ticket template
 
 ```markdown

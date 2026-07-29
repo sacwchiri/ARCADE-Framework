@@ -8,7 +8,13 @@ The workflow is intentionally not fully autonomous. Agents prepare decisions, pl
 
 OpenCode can invoke project subagents by `@` mention. This pack provides a primary Studio Orchestrator under `.opencode/agents/` and project commands under `.opencode/commands/` so the human can enter workflows without remembering long prompts. The Markdown files under `.opencode/workflows/` are source-of-truth process documents; they are read by the orchestrator and are not slash commands by themselves.
 
-Use the **Studio Orchestrator** as the main agent. It selects only the specialists needed for the current work and stops at human decision gates. At each gate, specialists document their questions, but the orchestrator also presents every unresolved question directly through OpenCode's questionnaire UI and waits for the answer. Start OpenCode from the consuming project root. The repository `opencode.json` sets the orchestrator as the default primary agent, or it can be selected by cycling primary agents in the TUI. The commands below also target it directly.
+Use the **Studio Orchestrator** as the main agent. It selects only the specialists needed for the current work and stops at human decision gates. At each gate, specialists document their questions, but the orchestrator also presents every unresolved question directly through OpenCode's questionnaire UI and waits for the answer. Start OpenCode from the consuming project root. The installed `.opencode/opencode.json` sets the orchestrator as the default primary agent, or it can be selected by cycling primary agents in the TUI. The commands below also target it directly.
+
+The consuming project starts without a seeded `docs/` directory. The first
+workflow or subagent that needs project documentation creates `docs/`, the
+required domain folders, and their `README.md` indexes. Later workflows update
+only the paths relevant to their work; they do not require unused domains or
+templates to exist.
 
 Common entry points:
 
@@ -45,7 +51,7 @@ image provider is missing, the human is asked to configure it, explicitly skip
 generation for that action, or defer the action. Engineering-only work, such as
 multiplayer-service design, does not trigger image generation.
 
-After changing `opencode.json`, an agent, or a command, quit and restart
+After changing `.opencode/opencode.json`, an agent, or a command, quit and restart
 OpenCode so the new configuration is loaded.
 
 Direct calls are useful for focused questions. Commands are preferred when moving work through a workflow stage.
@@ -336,6 +342,9 @@ Human action:
 ```
 
 The Documentation Curator updates folder README inventories, cross-links, status, supersession notes, and contradictions.
+
+If this is the first documentation operation, the curator creates the missing
+`docs/` and affected folder indexes before curating them.
 
 The human normally only reviews the proposed documentation changes. The curator must not invent or reinterpret decisions.
 

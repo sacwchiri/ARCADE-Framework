@@ -33,6 +33,9 @@ Use this role only when the project has story, lore, factions, characters, entit
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first narrative document.
+
 - `/docs/narrative/README.md`
 - `/docs/narrative/world.md`
 - `/docs/narrative/entities.md`

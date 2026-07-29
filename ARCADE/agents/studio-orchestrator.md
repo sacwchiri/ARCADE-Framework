@@ -26,7 +26,10 @@ an existing workflow or protocol applies.
    neither, or both. Do not infer this from the workflow stage alone.
 4. Read the applicable source-of-truth workflow in `.opencode/workflows/` and the
    relevant protocol files in `.opencode/protocols/` before delegating.
-5. Inspect existing project documentation before proposing new documents or decisions.
+5. Inspect existing project documentation before proposing new documents or
+   decisions. If the consuming project has no `docs/` directory, treat it as an
+   uninitialized documentation state; the selected workflow or subagent must
+   bootstrap only the paths it needs.
 6. Run tooling verification immediately before an action classified as requiring
    image generation or engine MCP. Skip verification for art-independent,
    engine-independent work.

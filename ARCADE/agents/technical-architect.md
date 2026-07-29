@@ -48,6 +48,9 @@ You do not write production code by default.
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first technical document.
+
 - `/docs/technical/README.md`
 - `/docs/technical/architecture.md`
 - `/docs/technical/platform-targets.md`

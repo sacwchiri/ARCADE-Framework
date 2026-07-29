@@ -42,6 +42,9 @@ You turn approved direction into an executable plan. You plan playable slices, n
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+production folder and `README.md` index before creating the first plan document.
+
 - `/docs/production/README.md`
 - `/docs/production/slices.md`
 - `/docs/production/milestones.md`

@@ -1,6 +1,6 @@
 # Repository Instructions
 
-This repository is an OpenCode workflow/documentation pack, not the game project that consumes it. Role definitions live in `.opencode/agents/`; workflows and protocols there are the source of truth for process details.
+This repository is an OpenCode workflow/documentation pack, not the game project that consumes it. Role definitions live in `.opencode/agents/`; workflows and protocols there are the source of truth for process details. Consuming projects start without a seeded `docs/` directory; workflows create project documentation on demand.
 
 ## Workflow
 
@@ -16,11 +16,11 @@ Humans own core fantasy, pillars, audience/platform, scope changes, visual and f
 - Implementation agents must read the approved task and relevant design/technical docs, inspect existing content, edit only approved scope, and run available checks.
 - If behavior, architecture, visual direction, or scope must change, stop and escalate before editing beyond the approved task.
 - Every handoff should identify source-of-truth docs, changed files, decisions, assumptions, deviations, risks, human decisions, and the next step; use `.opencode/protocols/handoff.md`.
-- Create only documents with a reader, owner, and supported decision/workflow; update the relevant `docs/*/README.md` index when documents are added, renamed, or obsolete.
+- Create only documents with a reader, owner, and supported decision/workflow. When documentation is first needed, create `docs/`, the required domain folder, and its `README.md`; update that index when documents are added, renamed, or obsolete.
 
 ## Reviews and tickets
 
-Put small reviews under `Review Notes` in the reviewed document; put cross-domain reviews in `docs/reviews/`. Use the ticket workflow (`//ticket`) for bugs, playtest observations, failed expectations, or other issues; tickets belong in `docs/production/tickets/`.
+Put small reviews under `Review Notes` in the reviewed document; create `docs/reviews/` when a cross-domain review is needed. Use the ticket workflow (`//ticket`) for bugs, playtest observations, failed expectations, or other issues; create `docs/production/tickets/` when tickets are first needed.
 
 ## Tooling
 

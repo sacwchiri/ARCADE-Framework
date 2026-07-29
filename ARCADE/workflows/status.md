@@ -10,7 +10,9 @@ project decisions.
 
 ## Procedure
 
-1. Inspect the relevant `docs/*/README.md` indexes and current project documents.
+1. Inspect the relevant `docs/*/README.md` indexes and current project
+   documents. If `docs/` is missing, report the project as documentation
+   uninitialized and continue without creating files.
 2. Check for concept, pre-production, slice, implementation, integration,
    validation, ticket, and documentation records.
 3. Identify the latest approved decision and any explicit human gate still open.

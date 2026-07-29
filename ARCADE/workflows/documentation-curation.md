@@ -11,7 +11,9 @@ Documentation Curator Agent.
 
 1. Read the handoff and identify its source-of-truth documents, decisions,
    assumptions, deviations, risks, and next step.
-2. Inspect the affected `docs/*/README.md` index before editing.
+2. If `docs/` or an affected domain folder/index is missing, create it before
+   inspecting and editing. Do not require a seeded project documentation tree.
+   Otherwise, inspect the affected `docs/*/README.md` index before editing.
 3. Add or update only documents with a clear reader, owner, and supported
    decision or workflow.
 4. Update affected indexes, links, status, and supersession notes.

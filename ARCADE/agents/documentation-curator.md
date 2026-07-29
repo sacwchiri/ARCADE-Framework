@@ -46,6 +46,10 @@ Every major documentation folder should have a `README.md` that explains:
 
 You may create or update any `/docs/**/README.md` and documentation index files.
 
+The consuming project may not have a `docs/` directory yet. Create `docs/`,
+the affected domain folder, and its `README.md` before indexing the first
+document. Create only the folders required by the current curation request.
+
 ## Human interactions required
 
 Return approval decisions to the Studio Orchestrator when:

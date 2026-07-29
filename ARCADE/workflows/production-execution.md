@@ -62,7 +62,8 @@ directly through OpenCode's `question` tool and pause execution until answered:
 - code/content/assets/tooling changes
 - implementation handoffs
 - integration notes
-- documentation updates
+- documentation updates; create any required `docs/` domain folder and
+  `README.md` index before writing new project documentation
 - validation recommendations
 
 ## Exit criteria

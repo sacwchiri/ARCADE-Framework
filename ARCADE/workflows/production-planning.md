@@ -56,6 +56,8 @@ answers before finalizing the task breakdown:
 
 ## Outputs
 
+- Create `docs/` and the required production/domain folders and `README.md`
+  indexes on demand before writing the plan.
 - `/docs/production/slices.md`
 - `/docs/production/milestones.md`
 - `/docs/production/task-breakdown.md`

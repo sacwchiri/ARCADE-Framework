@@ -44,6 +44,10 @@ You are especially important when backend, Unity/client, gameplay, UI, content, 
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and each required
+domain folder and `README.md` index before creating the first integration report
+or contract document.
+
 - `/docs/production/integration-plan.md`
 - `/docs/production/integration-report.md`
 - `/docs/validation/integration-checklist.md`

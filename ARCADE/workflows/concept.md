@@ -37,6 +37,9 @@ source-of-truth documents:
 
 ## Outputs
 
+- Create `docs/` and the required domain folders and `README.md` indexes before
+  writing the first project documents; create only the domains selected for this
+  concept.
 - `/docs/concept/concept-brief.md`
 - `/docs/product/game-pillars.md`
 - `/docs/product/scope-boundaries.md`

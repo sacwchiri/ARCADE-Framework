@@ -7,12 +7,16 @@ It is designed for projects that start from a general game idea and need to move
 
 ## Install
 
-Copy the `.opencode` folder and `opencode.json` into your project root:
+Copy the `.opencode` folder into your project root. It contains the agents,
+commands, workflows, and OpenCode configuration:
 
 ```bash
 cp -R .opencode /path/to/your/game-project/
-cp opencode.json /path/to/your/game-project/
 ```
+
+The consuming project does not need a pre-created `docs/` folder. The first
+workflow or subagent that needs project documentation creates the relevant
+folders and README indexes on demand.
 
 Start OpenCode from the consuming project root. The Studio Orchestrator is the
 default primary agent. Project-specific agents live in `.opencode/agents/`, and

@@ -39,6 +39,9 @@ You are not only a UI builder. You own comprehension, flows, states, and player-
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first UX document.
+
 - `/docs/ux/README.md`
 - `/docs/ux/player-flow.md`
 - `/docs/ux/screen-map.md`

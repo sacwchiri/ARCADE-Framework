@@ -34,6 +34,9 @@ You define how sound and music communicate game state, feedback, emotion, and rh
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first audio document.
+
 - `/docs/audio/README.md`
 - `/docs/audio/audio-direction.md`
 - `/docs/audio/sound-event-list.md`

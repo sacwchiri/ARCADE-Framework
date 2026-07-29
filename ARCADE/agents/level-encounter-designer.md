@@ -35,6 +35,9 @@ Use this role when the game depends on authored spaces, puzzles, combat encounte
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first level document.
+
 - `/docs/levels/README.md`
 - `/docs/levels/level-design-rules.md`
 - `/docs/levels/encounter-design.md`

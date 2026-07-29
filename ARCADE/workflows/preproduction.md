@@ -48,6 +48,8 @@ source-of-truth documents:
 
 ## Outputs
 
+- Create `docs/` and the required domain folders and `README.md` indexes on
+  demand before writing the selected pre-production documents.
 - `/docs/preproduction/preproduction-plan.md`
 - `/docs/preproduction/prototype-plan.md`
 - domain-specific docs in `/docs/design`, `/docs/art`, `/docs/ux`, `/docs/content`, `/docs/technical`, `/docs/audio`, `/docs/narrative`, or `/docs/levels`

@@ -43,6 +43,8 @@ directly through OpenCode's `question` tool and pause integration until answered
 
 ## Outputs
 
+- Create `docs/` and the required production, validation, or contract-domain
+  folders and `README.md` indexes on demand before recording results.
 - `/docs/production/integration-report.md`
 - `/docs/validation/integration-checklist.md`
 - tickets for integration failures

@@ -42,6 +42,8 @@ Agents should convert human findings into tickets when needed.
 
 ## Outputs
 
+- Create `docs/` and the required validation or ticket folders and `README.md`
+  indexes on demand before recording results or tickets.
 - `/docs/validation/test-plan.md`
 - `/docs/validation/playtest-plan.md`
 - `/docs/validation/playtest-sessions/*.md`

@@ -40,6 +40,10 @@ You do not write production code.
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and each required
+domain folder and `README.md` index before creating the first document. Create
+only the domains needed for the current concept.
+
 - `/docs/concept/README.md`
 - `/docs/concept/concept-brief.md`
 - `/docs/product/README.md`

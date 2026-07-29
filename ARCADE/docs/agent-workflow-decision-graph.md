@@ -135,9 +135,9 @@ flowchart TD
 
 ## Review and handoff rules
 
-Run `blind-spot-reviewer` at the meaningful gates: after concept, document selection, architecture, art/UX direction, pre-production, slices, before execution, and before release. Put local notes in the reviewed document; put cross-domain or release reviews in `/docs/reviews/`.
+Run `blind-spot-reviewer` at the meaningful gates: after concept, document selection, architecture, art/UX direction, pre-production, slices, before execution, and before release. Put local notes in the reviewed document; put cross-domain or release reviews in `/docs/reviews/`, creating that folder and its index on demand.
 
-Every handoff should identify completed work, source-of-truth documents, changed files, decisions, assumptions, deviations, risks, human decisions, and the recommended next step. The Documentation Curator should update affected folder indexes whenever documents are created or re-scoped.
+Every handoff should identify completed work, source-of-truth documents, changed files, decisions, assumptions, deviations, risks, human decisions, and the recommended next step. The workflow or subagent creating a document must create its missing domain folder and `README.md` index; the Documentation Curator should update affected folder indexes whenever documents are created or re-scoped.
 
 ## Human authority summary
 

@@ -39,6 +39,9 @@ You do not write production code.
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first design document.
+
 - `/docs/design/README.md`
 - `/docs/design/core-loop.md`
 - `/docs/design/systems-map.md`

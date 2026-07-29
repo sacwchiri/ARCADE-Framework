@@ -38,6 +38,9 @@ A content pipeline stores and loads content. You decide what content should exis
 
 You may create or update:
 
+If the project documentation tree is missing, create `docs/` and the required
+domain folder and `README.md` index before creating the first content document.
+
 - `/docs/content/README.md`
 - `/docs/content/content-taxonomy.md`
 - `/docs/content/content-plan.md`
