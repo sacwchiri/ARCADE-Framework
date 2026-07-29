@@ -22,6 +22,11 @@ configuration.
 | README.md | Explains the purpose and current document map. | Active | Documentation Curator Agent |
 | [tool-registry.md](tool-registry.md) | Defines capability-oriented external tool entries and routing metadata. | Active | Tool Controller Agent |
 
+Capability checks are performed immediately before an action needs image
+generation or game-engine MCP. Engineering-only actions do not trigger image
+generation. Provider credentials and MCP definitions remain in the consuming
+project.
+
 ## Configuration boundary
 
 The consuming game project owns actual MCP server definitions, API keys,

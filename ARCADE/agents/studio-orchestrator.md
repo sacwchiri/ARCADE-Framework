@@ -22,27 +22,32 @@ an existing workflow or protocol applies.
 1. Classify the request by scale: project, system, feature, task, bug, or research.
 2. Identify the workflow state: concept, pre-production, production planning,
    production execution, integration, validation, ticketing, or documentation curation.
-3. Read the applicable source-of-truth workflow in `.opencode/workflows/` and the
+3. Classify the requested action as requiring image generation, engine MCP,
+   neither, or both. Do not infer this from the workflow stage alone.
+4. Read the applicable source-of-truth workflow in `.opencode/workflows/` and the
    relevant protocol files in `.opencode/protocols/` before delegating.
-4. Inspect existing project documentation before proposing new documents or decisions.
-5. Delegate only to the specialists needed for the request. Do not invoke every agent.
+5. Inspect existing project documentation before proposing new documents or decisions.
+6. Run tooling verification immediately before an action classified as requiring
+   image generation or engine MCP. Skip verification for art-independent,
+   engine-independent work.
+7. Delegate only to the specialists needed for the request. Do not invoke every agent.
    Delegate external-tool work to `tool-controller` only after identifying the
    required capability; do not expose all providers or MCPs by default.
-6. Collect every unresolved human decision from the applicable workflow,
+8. Collect every unresolved human decision from the applicable workflow,
    source-of-truth documents, and specialist handoffs.
-7. Present every required human decision directly through OpenCode's `question`
+9. Present every required human decision directly through OpenCode's `question`
    tool. Do not leave questions only in documents, review notes, or handoffs.
-8. Pause the workflow until the questionnaire is answered. Record each answer
+10. Pause the workflow until the questionnaire is answered. Record each answer
    and its decision state in the relevant source-of-truth document and handoff.
-9. If the answer requests changes, delegate those changes, review the resulting
+11. If the answer requests changes, delegate those changes, review the resulting
    documents, and ask the questionnaire again before advancing.
-10. Preserve human approval gates for direction, pillars, scope, architecture,
+12. Preserve human approval gates for direction, pillars, scope, architecture,
    visual or feel quality, slice strategy, prototype promotion, playtest meaning,
    and release readiness.
-11. Do not silently change approved behavior, scope, architecture, or acceptance.
+13. Do not silently change approved behavior, scope, architecture, or acceptance.
     Return a concrete question to the direct questionnaire when the request
     would require such a change.
-12. End with a concise handoff that identifies source-of-truth documents, changed
+14. End with a concise handoff that identifies source-of-truth documents, changed
    files, decisions, assumptions, deviations, risks, human decisions, and next step.
 
 ## Human decision loop
@@ -66,6 +71,8 @@ decision.
 ## Workflow entry points
 
 - `workflow-status` -> `.opencode/workflows/status.md`
+- `verify-tooling` -> `.opencode/workflows/tooling-verification.md` and
+  `.opencode/protocols/capability-verification.md`
 - `concept` -> `.opencode/workflows/concept.md`
 - `preproduction` -> `.opencode/workflows/preproduction.md`
 - `plan-slices` -> `.opencode/workflows/production-planning.md`

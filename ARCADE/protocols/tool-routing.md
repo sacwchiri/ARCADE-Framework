@@ -11,6 +11,8 @@ External tools are capabilities, not default context for every agent.
   project, never in this workflow pack.
 - Prefer an existing approved artifact over creating a new one.
 - Prefer dry-run for paid, batch, destructive, or irreversible actions.
+- Verify a required capability immediately before invocation; do not run a
+  blanket check for unrelated providers or MCP servers.
 - Tool selection must account for license, cost, output format, latency, and
   technical suitability.
 - A tool result is an artifact handoff, not a replacement for human approval.
@@ -38,3 +40,9 @@ Each registered capability should identify:
 - Destructive-operation risk
 - Fallback capability
 - Owner
+
+## Capability classification
+
+Before routing, classify the action as `image-generation`, `engine-mcp`,
+`art-independent`, `engine-independent`, or a combination. Use
+`capability-verification.md` for required checks and missing-capability decisions.

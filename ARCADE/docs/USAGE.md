@@ -23,6 +23,7 @@ Common entry points:
 /ticket <bug or playtest observation>
 /curate <documentation area or change>
 /art-pipeline <asset request>
+/verify-tooling <next action requiring image generation or engine MCP>
 /tool <approved tool capability request>
 ```
 
@@ -37,6 +38,12 @@ A specialist can also be called directly:
 
 Specialists are subagents, not primary agents. They are expected to be called
 with `@agent-name` or delegated to by the Studio Orchestrator.
+
+Before an action that requires image generation or engine MCP, the orchestrator
+classifies the action and runs only the relevant capability verification. If an
+image provider is missing, the human is asked to configure it, explicitly skip
+generation for that action, or defer the action. Engineering-only work, such as
+multiplayer-service design, does not trigger image generation.
 
 After changing `opencode.json`, an agent, or a command, quit and restart
 OpenCode so the new configuration is loaded.

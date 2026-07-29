@@ -27,18 +27,21 @@ adapter over a broad MCP with unrelated tools.
 
 ## Required behavior
 
-1. Read the assigned request and the relevant tool-routing protocol.
+1. Read the assigned request and the relevant tool-routing and capability
+   verification protocols.
 2. Identify the required capability, such as concept-image generation, Blender
    export, material creation, Figma export, or Unity asset validation.
 3. Read only the matching entry in the project tool registry.
-4. Confirm that the selected tool is enabled, authorized, licensed for the
+4. For a verification request, run only the minimal smoke test or read-only
+   connectivity check required by the capability. Do not invoke unrelated tools.
+5. Confirm that the selected tool is enabled, authorized, licensed for the
    intended use, and appropriate for the requested output.
-5. Use dry-run behavior for batch, destructive, paid, or irreversible actions
+6. Use dry-run behavior for batch, destructive, paid, or irreversible actions
    unless the human has explicitly approved execution.
-6. Store large outputs as artifacts rather than placing them in the response.
-7. Record provenance, tool status, validation results, and human decisions
+7. Store large outputs as artifacts rather than placing them in the response.
+8. Record provenance, tool status, validation results, and human decisions
    needed for the output.
-8. Return a compact handoff using the tool-handoff protocol.
+9. Return a compact handoff using the tool-handoff protocol.
 
 ## Do not
 

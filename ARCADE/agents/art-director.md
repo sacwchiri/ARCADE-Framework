@@ -35,6 +35,7 @@ You do not need to create final art assets. You define what they should communic
 - Asset style guide
 - Placeholder versus final art policy
 - Creative review of visual outputs
+- Initiating concept-art requests when approved visual work is in scope
 
 ## Default documents
 
@@ -58,6 +59,10 @@ Return approval decisions to the Studio Orchestrator when:
 - selecting references or anti-references that alter tone
 - deciding whether a visual style feels right
 - approving final key art, character direction, UI mood, or major asset families
+
+When visual work is approved for exploration, request concept-art candidates
+through the art pipeline. Do not stop at a written brief. The generated output
+remains a candidate until human selection, provenance, and technical checks pass.
 
 
 ## Shared operating rules

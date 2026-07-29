@@ -20,13 +20,16 @@ and approval requirements.
 
 1. Art Director or UX Designer defines the approved visual intent.
 2. Production adds the asset request to the slice and asset manifest.
-3. Tool Controller is invoked only if a registered capability is needed.
-4. Candidates are stored separately from runtime exports.
-5. Human selects or rejects candidates when direction or taste is affected.
-6. Technical Art checks constraints and provenance.
-7. Art Integration imports the approved candidate and creates runtime content.
-8. Validation checks technical and acceptance requirements.
-9. Human approves final visual quality.
+3. The action is classified as image-generating, engine-dependent, or independent.
+4. Tooling verification runs immediately before any required image provider or
+   engine MCP is invoked.
+5. Tool Controller is invoked only for the verified registered capability.
+6. Candidates are stored separately from runtime exports.
+7. Human selects or rejects candidates when direction or taste is affected.
+8. Technical Art checks constraints and provenance.
+9. Art Integration imports the approved candidate and creates runtime content.
+10. Validation checks technical and acceptance requirements.
+11. Human approves final visual quality.
 
 ## Required separation
 
@@ -35,3 +38,5 @@ and approval requirements.
 - Source files are not runtime files.
 - Technical validation is not taste approval.
 - Placeholder assets remain replaceable.
+- Engineering-only work may proceed without concept-art generation when its
+  explicit action classification does not require visual output.

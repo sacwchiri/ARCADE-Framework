@@ -27,6 +27,8 @@ Owner: [role]
 - Output: preview images plus provenance record.
 - Human approval: required before use as visual direction or production source.
 - Risk: provider terms, style inconsistency, source-image restrictions, and usage cost.
+- Verification: enabled approved provider plus minimal smoke-generation artifact
+  and provenance handoff immediately before an image-generating action.
 
 ### 3D authoring and export
 
@@ -55,6 +57,14 @@ Owner: [role]
 - Output: validation report and suggested fixes.
 - Human approval: not required for a pass/fail report; required for exceptions.
 - Risk: false confidence if the contract is incomplete.
+
+### Game-engine MCP
+
+- Input: consuming project MCP configuration and a requested read-only capability check.
+- Output: connectivity report identifying the engine/project context without secrets.
+- Human approval: required before manual fallback or scope changes; not required for a read-only pass.
+- Risk: unavailable server, stale project context, or unsafe mutation during verification.
+- Verification: enabled server configuration and harmless read-only connectivity check.
 
 ## Project-specific entries
 

@@ -21,7 +21,8 @@ Selected by Production Planner:
 - Art Integration Agent
 - Audio Integration Agent
 - VFX Integration Agent
-- Tool Controller Agent, only when an approved external tool capability is needed
+- Tool Controller Agent, only after the action is classified and the required
+  capability has passed tooling verification
 
 Supporting agents:
 
@@ -40,6 +41,11 @@ Implementation agents must:
 5. Edit only approved scope.
 6. Run available checks.
 7. Produce a handoff.
+
+Before delegation, the Studio Orchestrator classifies each approved task. Image
+generation is required for art-bearing tasks and skipped for engineering-only
+tasks. Engine MCP verification is required only for tasks that use engine MCP.
+Missing capabilities pause the task for a configure, skip, or defer decision.
 
 ## Human interactions required
 

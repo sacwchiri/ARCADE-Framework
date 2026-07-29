@@ -22,21 +22,24 @@ agent.
 ## Procedure
 
 1. Read the approved slice, visual direction, UX contract, and asset manifest.
-2. Create or update a structured asset request with purpose, references, type,
+2. Classify the request as requiring image generation, engine MCP, both, or
+   neither. Run tooling verification immediately before any required capability
+   is invoked. Do not verify or load tools for an art-independent request.
+3. Create or update a structured asset request with purpose, references, type,
    constraints, variants, target platform, and approval requirements.
-3. Determine whether the request needs an artist, a licensed existing asset, a
+4. Determine whether the request needs an artist, a licensed existing asset, a
    procedural tool, an external generator, or a combination.
-4. Ask the Tool Controller for a capability only when an external or local
+5. Ask the Tool Controller for a capability only when an external or local
    authoring tool is required. Do not load unrelated tools.
-5. Produce candidates or source assets. Keep source files separate from runtime
+6. Produce candidates or source assets. Keep source files separate from runtime
    exports and record provenance immediately.
-6. Ask the Art Director or UX Designer to select or reject candidates when the
+7. Ask the Art Director or UX Designer to select or reject candidates when the
    output affects visual direction, UI mood, or player comprehension. Return any
    human decision to the Studio Orchestrator for direct questionnaire handling.
-7. Ask Technical Art to check the asset contract and runtime constraints.
-8. Send accepted candidates to Art Integration for engine import and setup.
-9. Run validation and update the asset manifest status.
-10. Return direction, quality, licensing exceptions, and promotion decisions to
+8. Ask Technical Art to check the asset contract and runtime constraints.
+9. Send accepted candidates to Art Integration for engine import and setup.
+10. Run validation and update the asset manifest status.
+11. Return direction, quality, licensing exceptions, and promotion decisions to
     the Studio Orchestrator. It must ask them directly through OpenCode's
     `question` tool and record approval before marking final visual quality as
     Approved.

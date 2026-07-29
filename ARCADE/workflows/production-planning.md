@@ -22,6 +22,11 @@ Every slice must include minimum playable experience layers:
 
 A slice is not complete just because code exists.
 
+Each task must also declare its capability requirements. Art-bearing tasks route
+through concept-art/image-generation verification before generation;
+engineering-only tasks must not acquire or generate art as a side effect. Engine
+tasks declare `engine-mcp` only when they actually require engine MCP.
+
 ## Default agents
 
 - Production Planner Agent

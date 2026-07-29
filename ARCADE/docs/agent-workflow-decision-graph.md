@@ -57,7 +57,13 @@ flowchart TD
     E2 --> E3[Prototype Implementation, if a throwaway proof is needed]
     E2 --> E4[Architecture, art/UX/content/audio/levels/tool planning as needed]
     E3 --> E5[Validation + Blind Spot Review]
-    E4 --> E5
+    E4 --> E4A{Does the action require image generation or engine MCP?}
+    E4A -->|Image generation or engine MCP| TV[Tooling verification]
+    E4A -->|Neither| E5
+    TV -->|Pass| E5
+    TV -->|Missing| HQ[Human: configure, skip, or defer]
+    HQ -->|Configure / retry| TV
+    HQ -->|Skip / defer| E5
     E5 --> H2{Human accepts prototype result and technical / visual tradeoffs?}
     H2 -->|No / iterate or stop| E
     H2 -->|Yes| F
@@ -117,6 +123,7 @@ flowchart TD
 |---|---|---|---|
 | Raw idea or unclear feature | `concept.md` | Director, Systems Designer, UX, Art Director, Content Designer, Technical Architect | Concept direction, pillars, scope, visual direction, proceed decision |
 | Known concept with risky assumptions | `preproduction.md` | Prototype Implementation, Technical Art, Audio, Narrative, Level/Encounter | Risk priority, prototype result, tradeoffs, production readiness |
+| Action requires image generation or engine MCP | `tooling-verification.md` / `/verify-tooling` | Tool Controller, only for the classified capability | Configure, skip, or defer when unavailable |
 | Art request or visual asset candidate | `art-pipeline.md` / `/art-pipeline` | Art Director, UX, Technical Art, Tool Controller, Art Integration, Validation | Visual direction, licensing, generated output, promotion to production |
 | Approved direction without playable increments | `production-planning.md` | Production Planner, domain agents, Blind Spot Reviewer | Slice count/order and first playable target |
 | Approved slice/task | `production-execution.md` | Gameplay, Backend, Unity, UI, Tools, Content Pipeline, Build/DevOps, Art/Audio/VFX Integration | Scope/behavior changes, prototype promotion, final feel |

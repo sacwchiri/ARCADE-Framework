@@ -21,6 +21,11 @@ Tool calls must return a compact handoff that makes the next action obvious.
 ## Validation
 -
 
+## Capability Verification
+- Classification: image-generation | engine-mcp | art-independent | engine-independent
+- Verification report or no-capability result:
+- Smoke artifact or connectivity result:
+
 ## Cost and Permission Status
 -
 

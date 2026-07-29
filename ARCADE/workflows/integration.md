@@ -27,6 +27,11 @@ Verify that all parts connect correctly.
 - UX state contract ↔ implementation
 - Production tasks ↔ actual deliverables
 
+Before checking engine-side contracts, verify `engine-mcp` when the integration
+action uses the engine MCP. Art-independent integration must not trigger image
+generation. Art-bearing integration must have a prior image-generation report
+or an explicit human-approved skip.
+
 ## Human interactions required
 
 Return these decisions to the Studio Orchestrator. It must present them
