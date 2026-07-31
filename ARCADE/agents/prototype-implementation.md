@@ -45,7 +45,7 @@ Build small experiments that reduce uncertainty. Prototype code is not productio
 ## Human interactions required
 
 Return the question of whether the prototype is fun, clear, or worth promoting
-to the Studio Orchestrator for direct questionnaire handling.
+to the active Implement stage agent for direct questionnaire handling.
 
 ## Output format
 

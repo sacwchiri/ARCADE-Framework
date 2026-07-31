@@ -27,7 +27,7 @@ without running unrelated tools or changing project scope.
 
 ## Required human interactions
 
-The Studio Orchestrator must ask directly through `question` when:
+The active stage agent must ask directly through `question` when:
 
 - image generation is required but no provider is configured;
 - engine MCP is required but unavailable;

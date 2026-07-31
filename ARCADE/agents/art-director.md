@@ -55,7 +55,7 @@ domain folder and `README.md` index before creating the first art document.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active Concept or Design stage agent when:
 
 - choosing final visual direction
 - changing visual pillars

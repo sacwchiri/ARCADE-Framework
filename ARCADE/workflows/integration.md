@@ -34,7 +34,7 @@ or an explicit human-approved skip.
 
 ## Human interactions required
 
-Return these decisions to the Studio Orchestrator. It must present them
+Return these decisions to the Implement stage agent. It must present them
 directly through OpenCode's `question` tool and pause integration until answered:
 
 - an integration mismatch exposes an ownership conflict

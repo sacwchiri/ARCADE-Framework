@@ -50,7 +50,7 @@ domain folder and `README.md` index before creating the first content document.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active stage agent when:
 
 - content changes tone, fantasy, or audience
 - quantity targets affect production scope

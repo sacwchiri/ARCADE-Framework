@@ -1,6 +1,6 @@
 ---
 description: Route an art request through the approved visual asset pipeline.
-agent: studio-orchestrator
+agent: design
 ---
 
 Read `.opencode/workflows/art-pipeline.md`, `.opencode/protocols/tool-routing.md`,

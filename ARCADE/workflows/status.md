@@ -18,7 +18,7 @@ project decisions.
 3. Identify the latest approved decision and any explicit human gate still open.
 4. Report missing evidence separately from confirmed state.
 5. Recommend exactly one next workflow. When the next step depends on an
-   unresolved decision, return one concrete question to the Studio Orchestrator,
+   unresolved decision, return one concrete question to the active stage agent,
    which must present it directly through OpenCode's `question` tool.
 
 ## Output

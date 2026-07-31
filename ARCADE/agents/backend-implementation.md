@@ -44,7 +44,7 @@ Before editing:
 
 ## Human interactions required
 
-Return human decisions to the Studio Orchestrator when:
+Return human decisions to the active Implement stage agent when:
 
 - the task requires changing approved behavior
 - the implementation reveals a design or architecture gap

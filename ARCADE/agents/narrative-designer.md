@@ -44,7 +44,7 @@ domain folder and `README.md` index before creating the first narrative document
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active Design stage agent when:
 
 - establishing canon
 - changing tone or theme

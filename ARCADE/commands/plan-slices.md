@@ -1,6 +1,6 @@
 ---
 description: Turn approved concept and pre-production decisions into playable slices and tasks.
-agent: studio-orchestrator
+agent: design
 ---
 
 Read `.opencode/workflows/production-planning.md` and apply that workflow to the request below.

@@ -58,15 +58,15 @@ Human decisions must use two channels:
 
 1. Record the question and its current status in the relevant source-of-truth
    document or handoff.
-2. The Studio Orchestrator must present the unresolved question directly through
+2. The active stage agent must present the unresolved question directly through
    OpenCode's `question` tool.
 
 Writing a question into `open-questions.md`, a review note, or a handoff is not
-enough. The workflow must pause until the orchestrator receives an answer.
+enough. The workflow must pause until the active stage agent receives an answer.
 
-Specialist agents must return human questions to the orchestrator in their
-handoff. They must not treat a documented question as answered, and the
-orchestrator must not advance the workflow while a required decision is pending.
+Specialist agents must return human questions to the active stage agent in their
+handoff. They must not treat a documented question as answered, and the stage
+agent must not advance the workflow while a required decision is pending.
 
 Use these decision states:
 

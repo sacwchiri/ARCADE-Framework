@@ -6,9 +6,18 @@ The workflow is intentionally not fully autonomous. Agents prepare decisions, pl
 
 ## 1. Interaction model
 
-OpenCode can invoke project subagents by `@` mention. This pack provides a primary Studio Orchestrator under `.opencode/agents/` and project commands under `.opencode/commands/` so the human can enter workflows without remembering long prompts. The Markdown files under `.opencode/workflows/` are source-of-truth process documents; they are read by the orchestrator and are not slash commands by themselves.
+OpenCode can invoke project subagents by `@` mention. This pack provides four
+selectable primary stage agents under `.opencode/agents/` and project commands
+under `.opencode/commands/` so the human can enter workflows without
+remembering long prompts. The Markdown files under `.opencode/workflows/` are
+source-of-truth process documents; they are read by the active stage agent and
+are not slash commands by themselves.
 
-Use the **Studio Orchestrator** as the main agent. It selects only the specialists needed for the current work and stops at human decision gates. At each gate, specialists document their questions, but the orchestrator also presents every unresolved question directly through OpenCode's questionnaire UI and waits for the answer. Start OpenCode from the consuming project root. The installed `.opencode/opencode.json` sets the orchestrator as the default primary agent, or it can be selected by cycling primary agents in the TUI. The commands below also target it directly.
+Select the stage that matches the work. Each stage agent selects only the
+specialists needed for the current work, supports explicit alignment loops, and
+stops at human decision gates. Start OpenCode from the consuming project root
+and choose `concept`, `design`, `implement`, or `evaluate` in the TUI. No stage
+is forced as the default, so the human controls the entry point.
 
 The consuming project starts without a seeded `docs/` directory. The first
 workflow or subagent that needs project documentation creates `docs/`, the
@@ -21,6 +30,9 @@ Common entry points:
 ```text
 /workflow-status
 /concept <idea>
+/design <requirements, feature, or pre-production focus>
+/implement <approved task or plan>
+/evaluate <artifact, feature, or playtest result>
 /preproduction <focus or constraints>
 /plan-slices <project, system, or feature>
 /execute-slice <approved slice name or number>
@@ -43,9 +55,9 @@ A specialist can also be called directly:
 ```
 
 Specialists are subagents, not primary agents. They are expected to be called
-with `@agent-name` or delegated to by the Studio Orchestrator.
+with `@agent-name` or delegated to by the active stage agent.
 
-Before an action that requires image generation or engine MCP, the orchestrator
+Before an action that requires image generation or engine MCP, the active stage agent
 classifies the action and runs only the relevant capability verification. If an
 image provider is missing, the human is asked to configure it, explicitly skip
 generation for that action, or defer the action. Engineering-only work, such as
@@ -72,7 +84,7 @@ Human action:
 /workflow-status
 ```
 
-The Studio Orchestrator reports whether the repository has an approved concept, a pending slice decision, implementation in progress, or validation waiting for human input.
+The Evaluate stage agent reports whether the repository has an approved concept, a pending design decision, implementation in progress, or validation waiting for human input.
 
 For a new repository, the expected answer is: start with Concept.
 
@@ -104,7 +116,7 @@ Expected outputs:
 
 Human action at the gate:
 
-The Studio Orchestrator presents these questions directly in OpenCode. The
+The Concept stage agent presents these questions directly in OpenCode. The
 same decisions are also recorded in the concept documents:
 
 - Is this a throwaway workflow prototype or production-intent code?
@@ -114,7 +126,7 @@ same decisions are also recorded in the concept documents:
 - Should the idea proceed to pre-production?
 
 The questionnaire uses explicit approval and modification choices. If changes
-are requested, the orchestrator routes them back to the relevant agents and
+are requested, the active stage agent routes them back to the relevant agents and
 asks the questionnaire again after the documents are updated.
 
 The human does not need to edit every document manually. They approve, reject,
@@ -226,7 +238,7 @@ Human action:
 /execute-slice Slice 1
 ```
 
-The Studio Orchestrator checks that the slice is approved and delegates only the needed work.
+The Implement stage agent checks that the slice is approved and delegates only the needed work.
 
 Likely specialists:
 
@@ -399,7 +411,7 @@ Use a slash command when the result should move the project from one stage to an
 
 ## 6. Do not invoke every agent
 
-The Studio Orchestrator should choose the minimum relevant team.
+The active stage agent should choose the minimum relevant team.
 
 A tiny local dice prototype does not need backend, narrative, live operations, level design, or a full content pipeline.
 

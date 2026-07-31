@@ -35,12 +35,12 @@ agent.
    exports and record provenance immediately.
 7. Ask the Art Director or UX Designer to select or reject candidates when the
    output affects visual direction, UI mood, or player comprehension. Return any
-   human decision to the Studio Orchestrator for direct questionnaire handling.
+   human decision to the active stage agent for direct questionnaire handling.
 8. Ask Technical Art to check the asset contract and runtime constraints.
 9. Send accepted candidates to Art Integration for engine import and setup.
 10. Run validation and update the asset manifest status.
 11. Return direction, quality, licensing exceptions, and promotion decisions to
-    the Studio Orchestrator. It must ask them directly through OpenCode's
+     the active stage agent. It must ask them directly through OpenCode's
     `question` tool and record approval before marking final visual quality as
     Approved.
 

@@ -44,7 +44,7 @@ tasks declare `engine-mcp` only when they actually require engine MCP.
 
 ## Required human slice validation
 
-Before final task breakdown, return these questions to the Studio Orchestrator.
+Before final task breakdown, return these questions to the active Design stage agent.
 It must present them directly through OpenCode's `question` tool and record the
 answers before finalizing the task breakdown:
 

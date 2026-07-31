@@ -46,7 +46,7 @@ domain folder and `README.md` index before creating the first level document.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active Design stage agent when:
 
 - level structure changes the player fantasy
 - difficulty progression changes target audience

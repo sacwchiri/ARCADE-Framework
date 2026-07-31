@@ -59,7 +59,7 @@ domain folder and `README.md` index before creating the first technical document
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active Design stage agent when:
 
 - selecting architecture with large long-term consequences
 - changing engine, platform, network model, or persistence strategy

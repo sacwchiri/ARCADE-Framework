@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "studio-orchestrator",
   "plugin": ["opencode-gpt-imagegen"],
   "mcp": {
     "unity": {

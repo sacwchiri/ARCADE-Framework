@@ -59,7 +59,7 @@ document.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active Design stage agent when:
 
 - visual constraints materially change the art direction
 - asset budgets require reducing quality or fidelity

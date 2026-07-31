@@ -53,7 +53,7 @@ only the domains needed for the current concept.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active stage agent when:
 
 - changing the core fantasy
 - changing target platform or audience

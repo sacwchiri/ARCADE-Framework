@@ -52,7 +52,7 @@ document. Create only the folders required by the current curation request.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active stage agent when:
 
 - deleting documentation
 - marking major active docs as obsolete

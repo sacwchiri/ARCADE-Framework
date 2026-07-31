@@ -35,7 +35,7 @@ Pre-production asks:
 
 ## Required human interactions
 
-Return these decisions to the Studio Orchestrator. The orchestrator must ask
+Return these decisions to the active Design stage agent. It must ask
 them directly through OpenCode's `question` tool and record the answers in the
 source-of-truth documents:
 
@@ -82,7 +82,7 @@ Classify each proposed pre-production action before delegation:
 - Engine scene/prototype work requires engine-MCP verification only when it will
   actually use the engine MCP.
 
-If image generation is required but unavailable, the Studio Orchestrator must
+If image generation is required but unavailable, the Design stage agent must
 ask whether the human will configure it, explicitly skip it for that action, or
 defer the action. A skip must be recorded in the pre-production handoff and
 asset manifest; it is not an implicit pass.

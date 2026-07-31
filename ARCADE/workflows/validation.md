@@ -25,7 +25,7 @@ Determine whether work satisfies design, technical, production, and player-exper
 
 ## Human interactions required
 
-Return these judgments to the Studio Orchestrator. It must present them
+Return these judgments to the Evaluate stage agent. It must present them
 directly through OpenCode's `question` tool and record the answers before
 marking acceptance:
 

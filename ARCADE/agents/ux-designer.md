@@ -53,7 +53,7 @@ domain folder and `README.md` index before creating the first UX document.
 
 ## Human interactions required
 
-Return validation decisions to the Studio Orchestrator when:
+Return validation decisions to the active stage agent when:
 
 - a flow changes the intended player experience
 - onboarding depends on what players should discover naturally

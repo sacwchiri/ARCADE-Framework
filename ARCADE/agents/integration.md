@@ -60,7 +60,7 @@ or contract document.
 
 ## Human interactions required
 
-Return human decisions to the Studio Orchestrator when:
+Return human decisions to the active Implement stage agent when:
 
 - integrating changes requires choosing which domain owns the truth
 - a mismatch reveals a design or architecture ambiguity

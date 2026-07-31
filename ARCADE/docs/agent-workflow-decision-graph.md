@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document maps the currently implemented OpenCode agents, workflows, and protocols to the point in a game-development project where they should be used. It is a routing guide for the Studio Orchestrator or a human choosing a direct specialist call.
+This document maps the currently implemented OpenCode agents, workflows, and protocols to the point in a game-development project where they should be used. It is a routing guide for the active stage agent or a human choosing a direct specialist call.
 
 This graph describes the capabilities present in this repository. It does not assume that a game codebase, engine, build pipeline, release process, telemetry system, or live-ops service already exists.
 
@@ -12,7 +12,9 @@ Implemented in `.opencode/`:
 
 - 27 role-specific agents covering direction, design, production, implementation, integration, validation, and controlled external-tool access.
 - Workflows for concept, pre-production, production planning, production execution, integration, validation, and ticket generation.
-- A primary Studio Orchestrator, status workflow, and documentation-curation workflow.
+- Four selectable primary stage agents: Concept, Design, Implement, and Evaluate.
+- A status workflow and documentation-curation workflow.
+- Stage command wrappers: `/concept`, `/design`, `/implement`, and `/evaluate`.
 - Slash-command wrappers under `.opencode/commands/` for each documented workflow entry point.
 - Lazy tool routing through the Tool Controller, capability registry, and compact artifact handoffs.
 - Protocols for document selection, decision authority, human interactions, review gates, slice planning, handoffs, playtests, and definition of done.
@@ -146,10 +148,11 @@ Agents may recommend structure, technical approaches, slices, tasks, checks, and
 ## Implementation note
 
 The workflow documents are the process source of truth. The executable entry
-points are thin OpenCode command definitions under `.opencode/commands/`; each
-The command targets `studio-orchestrator` and passes `$ARGUMENTS`. The orchestrator
-reads the selected workflow, delegates to the smallest relevant specialist
-team, and preserves the human approval gates defined by that workflow.
+points are thin OpenCode command definitions under `.opencode/commands/`. Each
+command targets the stage agent that owns its work and passes `$ARGUMENTS`.
+The selected stage agent reads the relevant workflow, delegates to the smallest
+relevant specialist team, and preserves the human approval gates defined by that
+workflow.
 
 The Tool Controller is a broker for capability-scoped external tools. Provider
 credentials and project-specific MCP configuration remain outside this pack.

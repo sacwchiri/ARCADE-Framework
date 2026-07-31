@@ -45,7 +45,7 @@ domain folder and `README.md` index before creating the first audio document.
 
 ## Human interactions required
 
-Return approval decisions to the Studio Orchestrator when:
+Return approval decisions to the active Design stage agent when:
 
 - selecting final audio tone
 - deciding whether sound supports or conflicts with the fantasy

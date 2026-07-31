@@ -1,6 +1,6 @@
 ---
 description: Select and invoke one approved external tool capability through the Tool Controller.
-agent: studio-orchestrator
+agent: implement
 ---
 
 Read `.opencode/protocols/tool-routing.md` and delegate only to

@@ -51,7 +51,7 @@ Let the project determine which docs are needed. Do not force generic templates.
 
 ## Human interactions required
 
-Return human decisions to the Studio Orchestrator when:
+Return human decisions to the active Concept or Design stage agent when:
 
 - game rules have multiple valid interpretations
 - a rule changes the intended fantasy

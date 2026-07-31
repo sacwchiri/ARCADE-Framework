@@ -38,7 +38,7 @@ delegating it; do not infer a capability from the overall workflow stage.
 ## Missing capability
 
 If a required capability is unavailable, pause and ask the human through the
-Studio Orchestrator questionnaire:
+Active stage agent questionnaire:
 
 1. Configure or enable the required capability.
 2. Skip the capability for this action.

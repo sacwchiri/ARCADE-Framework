@@ -26,7 +26,7 @@ Answer:
 
 ## Required human interactions
 
-Return these decisions to the Studio Orchestrator. The orchestrator must ask
+Return these decisions to the active Concept stage agent. It must ask
 them directly through OpenCode's `question` tool and record the answers in the
 source-of-truth documents:
 
@@ -56,7 +56,7 @@ When visual identity, camera, composition, shape language, color, or mood matter
 1. The Art Director creates a compact visual brief with concrete scene content,
    camera/view, shape language, color language, lighting, mood, and explicit
    anti-references. Treat this as a hypothesis, not an approved style.
-2. The Studio Orchestrator classifies the request as requiring image generation
+2. The Concept stage agent classifies the request as requiring image generation
    and runs the capability-verification protocol before delegating generation.
 3. The Tool Controller produces the smallest useful candidate set, normally one
    to three images or equivalent quick studies. Do not generate a large set or
@@ -64,7 +64,7 @@ When visual identity, camera, composition, shape language, color, or mood matter
 4. The candidate artifacts, prompts or source brief, provider, provenance, and
    validation status are recorded with the concept documents. Generated means
    candidate only; it does not mean approved or production-ready.
-5. The Studio Orchestrator asks the human to review the candidates directly and
+5. The Concept stage agent asks the human to review the candidates directly and
    records one of `Approved`, `Approved with changes`, `Rejected`, or
    `Not applicable`. If changes are requested, revise the brief and repeat the
    check before treating visual direction as approved.

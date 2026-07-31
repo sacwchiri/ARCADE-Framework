@@ -4,7 +4,7 @@ External tools are capabilities, not default context for every agent.
 
 ## Routing rules
 
-- The orchestrator identifies whether a tool capability is needed.
+- The active stage agent identifies whether a tool capability is needed.
 - The Tool Controller loads one relevant registry entry at a time.
 - Provider-specific instructions remain inside the adapter or MCP.
 - Credentials and project-specific MCP configuration stay in the consuming game

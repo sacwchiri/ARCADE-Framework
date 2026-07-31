@@ -66,6 +66,6 @@ Optional. Include only if known.
 ## Human interactions required
 
 Return missing reproduction steps, build version, evidence, or impact to the
-Studio Orchestrator. It must request the information directly through
+active Evaluate stage agent. It must request the information directly through
 OpenCode's `question` tool before finalizing the ticket when those details are
 required. If the human does not know an item, record an explicit placeholder.

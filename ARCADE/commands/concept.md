@@ -1,6 +1,6 @@
 ---
 description: Turn a raw game idea or unclear feature into a scoped concept.
-agent: studio-orchestrator
+agent: concept
 ---
 
 Read `.opencode/workflows/concept.md` and apply that workflow to the request below.

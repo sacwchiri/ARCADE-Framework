@@ -42,9 +42,9 @@ Every agent handoff should make the next step obvious.
 - 
 ```
 
-The `Human Decisions Needed` section is an input to the Studio Orchestrator's
+The `Human Decisions Needed` section is an input to the active stage agent's
 direct questionnaire. A handoff must not leave a required decision only in this
-section: the orchestrator presents it through OpenCode's `question` tool, waits
+section: the stage agent presents it through OpenCode's `question` tool, waits
 for the answer, and records the result in the relevant source-of-truth document.
 
 ## Common handoff paths

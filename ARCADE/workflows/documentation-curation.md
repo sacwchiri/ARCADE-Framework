@@ -20,7 +20,7 @@ Documentation Curator Agent.
 5. Put small review notes in the reviewed document and cross-domain reviews in
    `/docs/reviews/`.
 6. Record contradictions instead of silently choosing between domain decisions;
-   return ownership conflicts to the Studio Orchestrator, which must present the
+   return ownership conflicts to the active stage agent, which must present the
    decision directly through OpenCode's `question` tool.
 7. Check that paths use repository-relative Markdown links and that the result
    matches actual files and current decisions.

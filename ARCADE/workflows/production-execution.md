@@ -42,14 +42,14 @@ Implementation agents must:
 6. Run available checks.
 7. Produce a handoff.
 
-Before delegation, the Studio Orchestrator classifies each approved task. Image
+Before delegation, the Implement stage agent classifies each approved task. Image
 generation is required for art-bearing tasks and skipped for engineering-only
 tasks. Engine MCP verification is required only for tasks that use engine MCP.
 Missing capabilities pause the task for a configure, skip, or defer decision.
 
 ## Human interactions required
 
-Return these decisions to the Studio Orchestrator. It must present them
+Return these decisions to the Implement stage agent. It must present them
 directly through OpenCode's `question` tool and pause execution until answered:
 
 - implementation requires changing approved behavior

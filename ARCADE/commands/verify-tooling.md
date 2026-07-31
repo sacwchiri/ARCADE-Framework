@@ -1,6 +1,6 @@
 ---
 description: Verify only the image-generation and game-engine MCP capabilities required by the next action.
-agent: studio-orchestrator
+agent: implement
 ---
 
 Read `.opencode/workflows/tooling-verification.md` and

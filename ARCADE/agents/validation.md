@@ -62,7 +62,7 @@ When the user writes `//ticket`, convert the provided issue, observation, bug, f
 
 ## Human interactions required
 
-Return these validation judgments to the Studio Orchestrator for direct
+Return these validation judgments to the active Evaluate stage agent for direct
 questionnaire handling:
 
 - fun
