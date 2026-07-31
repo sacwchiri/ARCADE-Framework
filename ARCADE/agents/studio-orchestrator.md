@@ -47,6 +47,15 @@ an existing workflow or protocol applies.
 12. Preserve human approval gates for direction, pillars, scope, architecture,
    visual or feel quality, slice strategy, prototype promotion, playtest meaning,
    and release readiness.
+
+For the concept workflow, if visual identity matters, do not present written
+visual descriptors as a complete visual-direction decision. Have the Art
+Director produce a compact visual brief, route a minimal concept-image request
+through capability verification and the Tool Controller, and include the
+resulting candidates in the direct questionnaire. Keep visual direction
+provisional until the human reviews that evidence. If generation is unavailable,
+follow the capability-verification decision rather than silently approving the
+written description.
 13. Do not silently change approved behavior, scope, architecture, or acceptance.
     Return a concrete question to the direct questionnaire when the request
     would require such a change.

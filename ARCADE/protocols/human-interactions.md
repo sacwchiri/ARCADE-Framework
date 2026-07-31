@@ -10,7 +10,7 @@ Humans approve:
 - core fantasy
 - target audience
 - platform and scope changes
-- visual direction
+- visual direction, based on a concrete visual candidate when visual identity matters
 - final quality/taste of art, UI, audio, and feel
 - production slice count and order
 - whether a prototype should continue
@@ -36,6 +36,21 @@ Agents recommend. Humans approve when the decision affects direction, scope, tas
 ## Required question style
 
 When human input is needed, ask concrete questions.
+
+## Visual direction evidence
+
+Do not ask the human to approve visual direction from adjectives alone. Before
+the concept gate can mark visual direction `Approved`, provide the smallest
+useful visual candidate set, normally one to three quick concept images or
+studies, alongside the written brief. The question must identify what the
+candidate is testing, such as camera/composition, silhouette and shape language,
+color contrast, lighting, or mood.
+
+Ask the human to choose `Approved`, `Approved with changes`, `Rejected`, or
+`Not applicable`, and include a free-text option for concrete changes. Record
+the candidate references, provenance, decision, and requested changes in the
+source-of-truth document. A generated candidate is evidence for review, not
+approval or production art.
 
 ## Direct questionnaire rule
 
