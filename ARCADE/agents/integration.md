@@ -1,6 +1,7 @@
 ---
 description: Verifies that parallel work connects into a playable, end-to-end experience across code, content, assets, UI, audio, and docs.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

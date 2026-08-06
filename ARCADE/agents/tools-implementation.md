@@ -1,6 +1,7 @@
 ---
 description: Implements editor tools, debug tools, import helpers, validators, and workflow automation.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

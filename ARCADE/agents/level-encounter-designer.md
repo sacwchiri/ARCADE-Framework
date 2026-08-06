@@ -1,6 +1,7 @@
 ---
 description: Designs levels, maps, encounters, spatial readability, difficulty progression, and encounter pacing.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

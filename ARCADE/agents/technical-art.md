@@ -1,6 +1,7 @@
 ---
 description: Bridges art and engineering through asset import rules, shaders, materials, animation, VFX, and visual performance budgets.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

@@ -1,6 +1,7 @@
 ---
 description: Defines worldbuilding, lore constraints, character/entity voice, naming rules, and flavor text consistency.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

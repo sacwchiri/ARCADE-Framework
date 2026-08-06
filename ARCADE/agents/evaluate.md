@@ -1,6 +1,7 @@
 ---
 description: Evaluates concepts, plans, prototypes, implementations, and playtest results and recommends the next action.
 mode: primary
+color: "#15ab65"
 temperature: 0.2
 permission:
   read: allow

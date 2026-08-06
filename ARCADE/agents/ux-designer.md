@@ -1,6 +1,7 @@
 ---
 description: Defines player flows, screen flows, input model, onboarding, accessibility, and comprehension.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

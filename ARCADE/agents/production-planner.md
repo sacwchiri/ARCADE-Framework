@@ -1,6 +1,7 @@
 ---
 description: Converts approved concepts and pre-production plans into playable slices, milestones, dependencies, and task breakdowns.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

@@ -1,6 +1,7 @@
 ---
 description: Implements UI screens, UI states, HUDs, menus, feedback states, and interface behavior.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

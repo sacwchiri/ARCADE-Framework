@@ -1,6 +1,7 @@
 ---
 description: Integrates sound effects, music hooks, audio events, mix rules, and placeholder/final audio assets.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

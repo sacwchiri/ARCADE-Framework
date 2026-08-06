@@ -1,6 +1,7 @@
 ---
 description: Executes approved production tasks and coordinates implementation integration without changing scope silently.
 mode: primary
+color: "#15ab65"
 temperature: 0.2
 permission:
   read: allow

@@ -1,6 +1,7 @@
 ---
 description: Integrates visual assets, prefabs, materials, sprites, icons, models, and placeholder/final asset replacements.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

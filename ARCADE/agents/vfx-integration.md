@@ -1,6 +1,7 @@
 ---
 description: Integrates visual effects, particles, shader effects, timing hooks, and feedback effects.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

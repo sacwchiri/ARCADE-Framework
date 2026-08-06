@@ -1,6 +1,7 @@
 ---
 description: Designs game rules, systems, player actions, loops, state transitions, and mechanics.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

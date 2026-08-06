@@ -1,6 +1,7 @@
 ---
 description: Reviews plans and documents for hidden assumptions, technical risk, scope traps, sequencing issues, and safer alternatives.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

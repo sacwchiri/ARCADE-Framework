@@ -1,6 +1,7 @@
 ---
 description: Defines content taxonomy, content plans, balance categories, sample content, and production content burden.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

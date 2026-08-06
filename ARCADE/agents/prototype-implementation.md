@@ -1,6 +1,7 @@
 ---
 description: Builds quick throwaway prototypes to test assumptions. Prototype code must be clearly labeled.
 mode: subagent
+color: "#15ab65"
 temperature: 0.4
 permission:
   edit: "ask"

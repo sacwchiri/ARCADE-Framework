@@ -1,6 +1,7 @@
 ---
 description: Implements gameplay logic, rules, state machines, player actions, and game systems.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

@@ -1,6 +1,7 @@
 ---
 description: Aligns requirements and plans design, technical, asset, and production work before implementation.
 mode: primary
+color: "#15ab65"
 temperature: 0.2
 permission:
   read: allow

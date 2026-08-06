@@ -1,6 +1,7 @@
 ---
 description: Handles build scripts, CI/CD, local environments, containers, deployments, and operational automation.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

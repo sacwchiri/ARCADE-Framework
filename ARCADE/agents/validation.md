@@ -1,6 +1,7 @@
 ---
 description: Creates validation plans, sanity checks, playtest protocols, acceptance reports, and structured tickets.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

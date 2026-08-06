@@ -1,6 +1,7 @@
 ---
 description: Implements backend services, APIs, persistence, server-authoritative logic, telemetry, and backend tests.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

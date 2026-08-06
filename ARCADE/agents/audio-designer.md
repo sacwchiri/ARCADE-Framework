@@ -1,6 +1,7 @@
 ---
 description: Defines audio identity, sound event list, music direction, audio feedback rules, and integration requirements.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

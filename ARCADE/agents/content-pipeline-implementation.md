@@ -1,6 +1,7 @@
 ---
 description: Implements content schemas, validators, loaders, sample content, localization structures, and data workflows.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

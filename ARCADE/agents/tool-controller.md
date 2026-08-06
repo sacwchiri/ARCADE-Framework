@@ -1,6 +1,7 @@
 ---
 description: Selects and invokes approved external tools through lazy, capability-scoped adapters while returning compact artifact handoffs.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   read: allow

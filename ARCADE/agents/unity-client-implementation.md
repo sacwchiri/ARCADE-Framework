@@ -1,6 +1,7 @@
 ---
 description: Implements Unity client features, scene integration, prefabs, presentation, and engine-facing code.
 mode: subagent
+color: "#15ab65"
 temperature: 0.1
 permission:
   edit: "ask"

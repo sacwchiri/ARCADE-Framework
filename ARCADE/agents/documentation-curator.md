@@ -1,6 +1,7 @@
 ---
 description: Maintains documentation consistency, folder READMEs, decision traceability, review placement, and cross-document communication.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

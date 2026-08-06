@@ -1,6 +1,7 @@
 ---
 description: Guides a human through creating or revising the local user profile and writes it only after explicit confirmation.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   read: allow

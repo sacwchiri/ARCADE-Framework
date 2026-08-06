@@ -1,6 +1,7 @@
 ---
 description: Designs architecture, runtime boundaries, networking, simulation, data ownership, content delivery, and testing strategy.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

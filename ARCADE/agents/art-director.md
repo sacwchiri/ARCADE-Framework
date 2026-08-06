@@ -1,6 +1,7 @@
 ---
 description: Defines visual identity, art pillars, readability, asset style, references, and visual consistency.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

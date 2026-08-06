@@ -1,6 +1,7 @@
 ---
 description: Defines and protects game direction, fun factor, pillars, scope, and human decision points.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   edit: "ask"

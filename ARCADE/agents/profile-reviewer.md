@@ -1,6 +1,7 @@
 ---
 description: Compares the local user profile with repeated workflow evidence and proposes, but never silently applies, profile updates.
 mode: subagent
+color: "#15ab65"
 temperature: 0.2
 permission:
   read: allow

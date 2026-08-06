@@ -1,6 +1,7 @@
 ---
 description: Explores and clarifies ideas, features, and product direction before design work.
 mode: primary
+color: "#15ab65"
 temperature: 0.2
 permission:
   read: allow
