@@ -14,6 +14,8 @@ Before delegating, identify:
 - decisions already approved
 - assumptions, risks, constraints, and missing information
 - required tools and whether they are available
+- resolved local or default user profile
+- explicit or inferred task discipline
 
 For an established project, prefer the existing ticket, design document, code,
 and project conventions over creating generic project-level artifacts.
@@ -32,6 +34,11 @@ execution:
 
 Do not create an indefinite loop. Every iteration ends with a recommendation,
 an explicit decision request, or a clear reason that work is blocked.
+
+The user profile may adapt guidance depth, questions, routing, and output format.
+It may not change stage boundaries, permissions, approved scope, human authority,
+capability verification, or the definition of done. Load the profile once at the
+primary stage and pass only a compact relevant context capsule to subagents.
 
 If the human does not know the answer, offer a default and mark it as an
 assumption pending validation.

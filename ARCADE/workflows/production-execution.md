@@ -46,6 +46,9 @@ Before delegation, the Implement stage agent classifies each approved task. Imag
 generation is required for art-bearing tasks and skipped for engineering-only
 tasks. Engine MCP verification is required only for tasks that use engine MCP.
 Missing capabilities pause the task for a configure, skip, or defer decision.
+The task's preferred discipline, when present, and the resolved user profile may
+influence specialist selection and explanation depth, but not permissions or
+capability verification.
 
 ## Human interactions required
 

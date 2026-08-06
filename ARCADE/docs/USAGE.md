@@ -13,6 +13,13 @@ remembering long prompts. The Markdown files under `.opencode/workflows/` are
 source-of-truth process documents; they are read by the active stage agent and
 are not slash commands by themselves.
 
+The consuming project may also have `.opencode/user-profile.local.yaml`. When
+present, primary stage agents use it to adapt guidance depth, discipline
+routing, questions, output format, and review emphasis for the human working on
+that project. If it is absent, `.opencode/user-profile.default.yaml` provides a
+general Solo Dev baseline. The profile never changes permissions, approved
+scope, human approval gates, or capability verification.
+
 Select the stage that matches the work. Each stage agent selects only the
 specialists needed for the current work, supports explicit alignment loops, and
 stops at human decision gates. Start OpenCode from the consuming project root
@@ -29,6 +36,8 @@ Common entry points:
 
 ```text
 /workflow-status
+/create-profile
+/review-profile [optional evidence or focus]
 /concept <idea>
 /design <requirements, feature, or pre-production focus>
 /implement <approved task or plan>
@@ -67,6 +76,35 @@ After changing `.opencode/opencode.json`, an agent, or a command, quit and resta
 OpenCode so the new configuration is loaded.
 
 Direct calls are useful for focused questions. Commands are preferred when moving work through a workflow stage.
+
+## 1a. User profile context
+
+The profile describes the human's strengths, support needs, preferences, and
+additional ownership expectations. It is not a replacement for specialist
+agents. A task may include an optional discipline hint:
+
+```yaml
+preferred_discipline: engineering
+preferred_disciplines:
+  - gameplay
+  - technical_art
+```
+
+The active stage agent resolves this hint and passes a compact relevant profile
+context to delegated agents. A profile can represent a solo developer with
+multiple disciplines, or a hybrid contributor such as a technical artist.
+
+Use `/review-profile` to compare repeated workflow evidence with the active
+profile. The Profile Reviewer proposes changes but never edits the profile
+automatically. The local profile is ignored by Git; keep only the default schema
+and safe fallback in the workflow pack.
+
+Use `/create-profile` for first-time setup or to revise the local profile. The
+Profile Creator asks grouped questions about disciplines, guidance needs,
+preferences, human ownership, and workflow defaults. It shows the complete YAML
+and a behavior summary, then writes `.opencode/user-profile.local.yaml` only
+after explicit confirmation. Existing local profiles are never overwritten
+silently.
 
 ## 2. The smallest complete example
 

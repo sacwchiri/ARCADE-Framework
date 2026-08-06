@@ -6,6 +6,12 @@ Use this workflow to turn approved concept/pre-production decisions into playabl
 
 Create a production plan that describes how to accomplish the proposal.
 
+Resolve the local or default user profile before assigning specialty work. A
+task may declare `preferred_discipline` or `preferred_disciplines`; otherwise,
+recommend routing from the task and profile. The profile changes guidance and
+routing emphasis only. It does not remove required slice layers, validation,
+documentation, or human approval.
+
 ## Required slice rule
 
 Every slice must include minimum playable experience layers:

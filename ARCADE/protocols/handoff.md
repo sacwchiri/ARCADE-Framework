@@ -13,6 +13,11 @@ Every agent handoff should make the next step obvious.
 ## Source of Truth Used
 - 
 
+## User Profile Context
+- Profile source: local / default / not available
+- Resolved discipline:
+- Profile-informed routing or guidance:
+
 ## Files Changed
 - 
 

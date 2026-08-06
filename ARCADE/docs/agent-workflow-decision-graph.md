@@ -10,13 +10,14 @@ This graph describes the capabilities present in this repository. It does not as
 
 Implemented in `.opencode/`:
 
-- 27 role-specific agents covering direction, design, production, implementation, integration, validation, and controlled external-tool access.
+- 27 role-specific agents covering direction, design, production, implementation, integration, validation, and controlled external-tool access, plus profile creation and review agents.
 - Workflows for concept, pre-production, production planning, production execution, integration, validation, and ticket generation.
 - Four selectable primary stage agents: Concept, Design, Implement, and Evaluate.
 - A status workflow and documentation-curation workflow.
 - Stage command wrappers: `/concept`, `/design`, `/implement`, and `/evaluate`.
 - Slash-command wrappers under `.opencode/commands/` for each documented workflow entry point.
 - Lazy tool routing through the Tool Controller, capability registry, and compact artifact handoffs.
+- Local user-profile context for guidance and discipline routing, with a review-only profile auditor.
 - Protocols for document selection, decision authority, human interactions, review gates, slice planning, handoffs, playtests, and definition of done.
 - Documentation areas for concept, product, design, technical, art, UX, content, audio, narrative, levels, production, validation, release, and live ops.
 
@@ -132,6 +133,8 @@ flowchart TD
 | Parallel work needs to connect | `integration.md` | Technical Architect, Systems, UX, Technical Art, Audio, Validation | Ownership conflicts, taste/fun acceptance |
 | Feature, slice, prototype, or candidate needs checking | `validation.md` | Integration, Blind Spot Reviewer, Documentation Curator | Fun, feel, clarity, pacing, taste, slice acceptance |
 | Bug, observation, failed expectation, or review issue | `ticket.md` / `//ticket` | Validation Agent | Missing reproduction/evidence/impact and ticket severity |
+| No local user profile exists | `/create-profile` | Profile Creator | Confirm generated profile before writing the local file |
+| Profile no longer matches observed needs | `/review-profile` | Profile Reviewer | Accept, reject, or defer suggested profile updates |
 | Release candidate | No dedicated workflow exists | Build/DevOps, Validation, Documentation Curator, Blind Spot Reviewer | Release readiness; first create a release workflow for repeatability |
 | Live product issue/event/telemetry/economy work | No dedicated workflow exists | Director, Technical Architect, Build/DevOps, Validation | Live-ops policy, player impact, incident and rollout decisions |
 
@@ -156,6 +159,12 @@ workflow.
 
 The Tool Controller is a broker for capability-scoped external tools. Provider
 credentials and project-specific MCP configuration remain outside this pack.
+
+The User Profile is a local, non-authoritative collaboration layer. It changes
+guidance, routing, questions, output format, and review emphasis. It does not
+change permissions, stage boundaries, human authority, approved scope, or
+capability verification. The active primary stage agent loads it once and passes
+compact relevant context to delegated specialists.
 
 ## Review Notes
 

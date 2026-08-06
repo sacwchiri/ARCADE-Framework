@@ -1,6 +1,9 @@
 # Protocol: Review Gates
 
 The Blind Spot Reviewer should run at meaningful gates, not after every tiny edit.
+The Profile Reviewer is separate: run it explicitly or when repeated evidence
+shows that guidance or routing no longer matches the user. It should not run at
+every gate or infer a profile change from a single task.
 
 ## Gates
 
