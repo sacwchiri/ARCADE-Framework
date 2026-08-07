@@ -1,10 +1,10 @@
-# Workflow: Production Execution
+# Implement Activity: Approved Work
 
-Use this workflow when approved tasks are ready to be implemented.
+Use this activity from the Implement stage when approved tasks are ready to be implemented.
 
 ## Goal
 
-Build approved tasks without changing product direction, architecture, or scope without escalation.
+Build and connect approved tasks without changing product direction, architecture, or scope without escalation.
 
 ## Default agents
 

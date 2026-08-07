@@ -35,7 +35,7 @@ The plan may include:
 
 Use the smallest useful documentation set. A feature in an established project
 usually needs a focused requirement/design note and task plan, not a complete
-new project pre-production package. Create domain documents only when they have
+new project planning package. Create domain documents only when they have
 a reader, owner, and supported decision.
 
 Delegate to the relevant design, architecture, production, art, content, UX,

@@ -3,7 +3,7 @@
 
 This pack defines a small-team, game-production-oriented agentic workflow for OpenCode.
 
-It is designed for projects that start from a general game idea and need to move through concept, pre-production, production planning, implementation, integration, validation, and human playtesting.
+It is designed for projects that move through four primary agent stages: concept, design, implement, and evaluate. Planning, integration, validation, and playtesting are delegated activities within those stages.
 
 ## Install
 
@@ -39,7 +39,7 @@ delegate to the smallest relevant specialist team.
 | Primary agent | Use when | Main outcome |
 | --- | --- | --- |
 | `concept` | An idea, feature, system, visual direction, or technical question is still unclear. | A clear concept, pillars, scope boundaries, and next step. |
-| `design` | Direction is approved but risks, requirements, architecture, content, assets, or prototypes still need planning. | An implementation-ready pre-production or design plan. |
+| `design` | Direction is approved but risks, requirements, architecture, content, assets, or prototypes still need planning. | An implementation-ready design and task plan. |
 | `implement` | An approved task or slice is ready to build. | Scoped code, content, asset, or tooling changes with a handoff. |
 | `evaluate` | A concept, prototype, slice, feature, bug, playtest, or release candidate needs an evidence-based decision. | A validation result and a recommendation to accept, iterate, ticket, or defer. |
 
@@ -79,10 +79,10 @@ after the task is approved and scoped.
 | `content-pipeline-implementation` | Schemas, loaders, validators, localization structures, and data workflows. It does not decide what content should exist. |
 | `build-devops` | Build scripts, CI/CD, local environments, containers, deployments, and operational automation. |
 
-### Integration and support specialists
+### Implementation and support specialists
 
-Use these after implementation work exists or when a cross-cutting workflow
-needs support. They do not silently change approved direction.
+Use these as delegated capabilities within Implement or when a cross-cutting
+workflow needs support. They do not silently change approved direction.
 
 | Agent | Suggested use |
 | --- | --- |
@@ -115,12 +115,13 @@ These are explicit workflow utilities, not general-purpose development agents.
 - Treat generated assets as candidates until a human approves their visual or audio direction.
 - Keep decisions about fantasy, pillars, scope, taste, fun, feel, acceptance, and release readiness with the human.
 
-`design` is the practical primary entry point for pre-production; ARCADE does
-not define a separate `preproduction` agent. The repository configuration also
-currently names `studio-orchestrator` as its default agent, but no matching
-definition exists in `ARCADE/agents/`. When using this pack, select one of the
-defined primary agents above unless your consuming project provides that
-orchestrator.
+The four primary agents are the lifecycle model. `design` handles concept
+follow-through, risk reduction, prototypes, and slice planning. `implement`
+handles approved work and its integration. `evaluate` handles validation,
+playtesting, acceptance, and ticket recommendations. The repository
+configuration currently names `studio-orchestrator` as its default agent, but no
+matching definition exists in `ARCADE/agents/`; select one of the defined
+primary agents unless the consuming project provides that orchestrator.
 
 ## User profile setup
 

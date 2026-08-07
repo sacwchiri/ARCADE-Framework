@@ -1,6 +1,6 @@
-# Workflow: Integration
+# Implement Activity: Integration
 
-Use this workflow when parallel work needs to become an end-to-end playable experience.
+Use this activity from the Implement stage when parallel work needs to become an end-to-end playable experience.
 
 ## Goal
 

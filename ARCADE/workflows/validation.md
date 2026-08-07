@@ -1,10 +1,10 @@
-# Workflow: Validation
+# Evaluate Activity: Validation and Playtesting
 
-Use this workflow to check concepts, prototypes, slices, features, bugs, and release candidates.
+Use this activity from the Evaluate stage to check concepts, prototypes, slices, features, bugs, and release candidates.
 
 ## Goal
 
-Determine whether work satisfies design, technical, production, and player-experience goals.
+Determine whether work satisfies design, technical, implementation, and player-experience goals.
 
 ## Default agents
 

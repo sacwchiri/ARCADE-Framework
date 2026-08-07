@@ -39,14 +39,9 @@ Common entry points:
 /create-profile
 /review-profile [optional evidence or focus]
 /concept <idea>
-/design <requirements, feature, or pre-production focus>
+/design <requirements, feature, or risk-reduction focus>
 /implement <approved task or plan>
 /evaluate <artifact, feature, or playtest result>
-/preproduction <focus or constraints>
-/plan-slices <project, system, or feature>
-/execute-slice <approved slice name or number>
-/integrate-slice <slice name or number>
-/validate-slice <slice name or number>
 /ticket <bug or playtest observation>
 /curate <documentation area or change>
 /art-pipeline <asset request>
@@ -161,7 +156,7 @@ same decisions are also recorded in the concept documents:
 - Must the visual die physically land on the selected result, or is any animation acceptable?
 - Is mouse input enough for the first version?
 - Is the proposed scope correct?
-- Should the idea proceed to pre-production?
+- Should the idea proceed to Design?
 
 The questionnaire uses explicit approval and modification choices. If changes
 are requested, the active stage agent routes them back to the relevant agents and
@@ -173,12 +168,12 @@ answers in the documents.
 
 ---
 
-### Stage 2 — Pre-production
+### Stage 2 — Design
 
 Human action:
 
 ```text
-/preproduction Focus on proving the OpenCode-to-Unity workflow. Use placeholders and avoid unnecessary architecture.
+/design Focus on proving the OpenCode-to-Unity workflow. Use placeholders and avoid unnecessary architecture.
 ```
 
 Agents normally involved:
@@ -207,7 +202,7 @@ Choose or approve:
 - prototype versus production quality
 - acceptable placeholder quality
 - any major technical tradeoff
-- whether the work is ready for slice planning
+- whether the work is ready for implementation
 
 For this example, a reasonable human decision is:
 
@@ -215,15 +210,15 @@ For this example, a reasonable human decision is:
 
 ---
 
-### Stage 3 — Production slice planning
+### Stage 3 — Design planning
 
 Human action:
 
 ```text
-/plan-slices The Unity dice-roll proof of concept
+/design Turn the Unity dice-roll proof of concept into one approved playable implementation plan.
 ```
 
-The Production Planner proposes playable slices before detailed tasks.
+The Production Planner proposes playable slices before detailed tasks as part of the Design stage.
 
 A minimal proposal may be:
 
@@ -268,15 +263,15 @@ The agent then records the approval and finalizes milestones, tasks, dependencie
 
 ---
 
-### Stage 4 — Production execution
+### Stage 4 — Implement
 
 Human action:
 
 ```text
-/execute-slice Slice 1
+/implement Implement the approved Unity dice-roll proof of concept.
 ```
 
-The Implement stage agent checks that the slice is approved and delegates only the needed work.
+The Implement stage agent checks that the plan is approved and delegates only the needed work.
 
 Likely specialists:
 
@@ -298,12 +293,12 @@ The human should expect implementation handoffs that state files changed, checks
 
 ---
 
-### Stage 5 — Integration
+### Stage 5 — Implement integration
 
 Human action:
 
 ```text
-/integrate-slice Slice 1
+/implement Connect and verify the complete Unity dice-roll player path.
 ```
 
 The Integration Agent checks the entire path:
@@ -328,12 +323,12 @@ Technical mismatches become tickets rather than being hidden inside handoffs.
 
 ---
 
-### Stage 6 — Validation and human playtest
+### Stage 6 — Evaluate
 
 Human action:
 
 ```text
-/validate-slice Slice 1
+/evaluate Validate and playtest the Unity dice-roll implementation.
 ```
 
 Agents perform or propose tool-checkable checks, then provide a short human playtest script.
@@ -403,11 +398,9 @@ The human normally only reviews the proposed documentation changes. The curator 
 | Stage | Agent responsibility | Human responsibility |
 |---|---|---|
 | Concept | Structure the idea, identify scope and questions | Approve direction, pillars, and boundaries |
-| Pre-production | Identify risks, prototypes, pipelines, and required docs | Choose risks, tradeoffs, visual target, and readiness |
-| Slice planning | Propose playable slices, dependencies, and validation | Approve slice count, order, and first playable target |
-| Execution | Delegate specialist work and produce handoffs | Approve permissions and resolve behavior/scope changes |
-| Integration | Connect parallel work and expose mismatches | Resolve taste, ownership, or intended-behavior conflicts |
-| Validation | Run sanity checks and prepare playtests | Play the build and judge fun, feel, clarity, and acceptance |
+| Design | Identify risks, prototypes, pipelines, requirements, and slices | Choose risks, tradeoffs, visual target, and implementation readiness |
+| Implement | Delegate approved work, connect systems, and produce handoffs | Approve permissions and resolve behavior/scope changes |
+| Evaluate | Run checks, prepare playtests, and report acceptance | Play the build and judge fun, feel, clarity, and acceptance |
 | Ticketing | Convert findings into actionable work | Supply impact, evidence, and reproduction context |
 | Curation | Keep documentation coherent | Confirm that records reflect actual decisions |
 
@@ -445,7 +438,8 @@ Examples:
 @blind-spot-reviewer review the networking plan without changing the game premise
 ```
 
-Use a slash command when the result should move the project from one stage to another and update project documentation.
+Use a slash command when the result should be owned by one of the four primary
+stages and update project documentation.
 
 ## 6. Do not invoke every agent
 
@@ -468,13 +462,13 @@ At the start of a work session:
 Then perform one stage-sized action:
 
 ```text
-/execute-slice Slice 1
+/implement Implement the next approved slice.
 ```
 
 or:
 
 ```text
-/validate-slice Slice 1
+/evaluate Validate the current slice and prepare a human playtest.
 ```
 
 At the end of meaningful work:

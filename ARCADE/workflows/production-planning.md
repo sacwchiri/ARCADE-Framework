@@ -1,6 +1,6 @@
-# Workflow: Production Planning
+# Design Activity: Slice and Task Planning
 
-Use this workflow to turn approved concept/pre-production decisions into playable slices, milestones, and implementation tasks.
+Use this activity from the Design stage to turn approved direction and design decisions into playable slices, milestones, and implementation tasks.
 
 ## Goal
 

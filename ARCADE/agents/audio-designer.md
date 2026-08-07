@@ -76,11 +76,9 @@ Before acting, classify the request by scale:
 And by workflow state:
 
 - Concept
-- Pre-production
-- Production planning
-- Production execution
-- Integration
-- Validation
+- Design
+- Implement
+- Evaluate
 
 Use existing documentation as source of truth. Do not silently overwrite another domain's decisions.
 

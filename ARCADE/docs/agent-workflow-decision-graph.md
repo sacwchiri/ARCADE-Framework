@@ -10,8 +10,8 @@ This graph describes the capabilities present in this repository. It does not as
 
 Implemented in `.opencode/`:
 
-- 27 role-specific agents covering direction, design, production, implementation, integration, validation, and controlled external-tool access, plus profile creation and review agents.
-- Workflows for concept, pre-production, production planning, production execution, integration, validation, and ticket generation.
+- 27 role-specific agents covering direction, design, implementation, evaluation, and controlled external-tool access, plus profile creation and review agents.
+- Workflows for concept, design planning, implementation, integration, evaluation, and ticket generation.
 - Four selectable primary stage agents: Concept, Design, Implement, and Evaluate.
 - A status workflow and documentation-curation workflow.
 - Stage command wrappers: `/concept`, `/design`, `/implement`, and `/evaluate`.
@@ -33,12 +33,12 @@ Not implemented as workflows:
 flowchart TD
     A[New idea, feature, bug, or observation] --> B{What is the work scale?}
     B -->|Project / system / feature / research| C{Is the direction unclear?}
-    B -->|Task ready for implementation| P[Production execution]
+    B -->|Task ready for implementation| P[Implement workflow]
     B -->|Bug / playtest observation / failed expectation| T[Ticket workflow]
 
     C -->|Yes| D[Concept workflow]
-    C -->|No, but risks remain| E[Pre-production workflow]
-    C -->|No, approved scope exists| F{Are playable slices defined and approved?}
+    C -->|No, but risks remain| E[Design workflow]
+    C -->|No, approved scope exists| F{Is an implementation plan approved?}
 
     D --> D1[Director + Systems Designer]
     D1 --> D2{Visual, UX, content, or feasibility questions?}
@@ -67,11 +67,11 @@ flowchart TD
     TV -->|Missing| HQ[Human: configure, skip, or defer]
     HQ -->|Configure / retry| TV
     HQ -->|Skip / defer| E5
-    E5 --> H2{Human accepts prototype result and technical / visual tradeoffs?}
+    E5 --> H2{Human accepts design result and technical / visual tradeoffs?}
     H2 -->|No / iterate or stop| E
     H2 -->|Yes| F
 
-    F -->|No| PP[Production Planning]
+    F -->|No| PP[Design planning]
     PP --> PP1[Production Planner + supporting domain agents]
     PP1 --> PP2[Slice layers: design, code, UX, art, audio/VFX, content, integration, validation, docs]
     PP2 --> PP3[Blind Spot Review]
@@ -84,7 +84,7 @@ flowchart TD
     P1 --> UI[UI / Tools / Content Pipeline]
     P1 --> AS[Art Integration / Audio Integration / VFX Integration]
     P1 --> TC[Tool Controller, only for approved external capabilities]
-    GI --> I[Integration workflow]
+    GI --> I[Implement integration activity]
     UI --> I
     AS --> I
     TC --> I
@@ -96,7 +96,7 @@ flowchart TD
     I2 -->|Technical mismatch| T
     I2 -->|Ownership conflict / taste decision| H4[Human decision]
     H4 -->|Change approved docs| PP
-    H4 -->|Continue| V[Validation workflow]
+    H4 -->|Continue| V[Evaluate workflow]
     I2 -->|No| V
 
     V --> V1[Technical, design, QA, asset, regression, and playtest checks]
@@ -125,13 +125,13 @@ flowchart TD
 | Situation | Start here | Add when needed | Human checkpoint |
 |---|---|---|---|
 | Raw idea or unclear feature | `concept.md` | Director, Systems Designer, UX, Art Director, Content Designer, Technical Architect | Concept direction, pillars, scope, visual direction, proceed decision |
-| Known concept with risky assumptions | `preproduction.md` | Prototype Implementation, Technical Art, Audio, Narrative, Level/Encounter | Risk priority, prototype result, tradeoffs, production readiness |
+| Known concept with risky assumptions | `design.md` + risk-reduction activity | Prototype Implementation, Technical Art, Audio, Narrative, Level/Encounter | Risk priority, prototype result, tradeoffs, implementation readiness |
 | Action requires image generation or engine MCP | `tooling-verification.md` / `/verify-tooling` | Tool Controller, only for the classified capability | Configure, skip, or defer when unavailable |
 | Art request or visual asset candidate | `art-pipeline.md` / `/art-pipeline` | Art Director, UX, Technical Art, Tool Controller, Art Integration, Validation | Visual direction, licensing, generated output, promotion to production |
-| Approved direction without playable increments | `production-planning.md` | Production Planner, domain agents, Blind Spot Reviewer | Slice count/order and first playable target |
-| Approved slice/task | `production-execution.md` | Gameplay, Backend, Unity, UI, Tools, Content Pipeline, Build/DevOps, Art/Audio/VFX Integration | Scope/behavior changes, prototype promotion, final feel |
-| Parallel work needs to connect | `integration.md` | Technical Architect, Systems, UX, Technical Art, Audio, Validation | Ownership conflicts, taste/fun acceptance |
-| Feature, slice, prototype, or candidate needs checking | `validation.md` | Integration, Blind Spot Reviewer, Documentation Curator | Fun, feel, clarity, pacing, taste, slice acceptance |
+| Approved direction without playable increments | `design.md` + slice-planning activity | Production Planner, domain agents, Blind Spot Reviewer | Slice count/order and first playable target |
+| Approved task or slice | `implement.md` + approved-work activity | Gameplay, Backend, Unity, UI, Tools, Content Pipeline, Build/DevOps, Art/Audio/VFX Integration | Scope/behavior changes, prototype promotion, final feel |
+| Parallel work needs to connect | `implement.md` + integration activity | Technical Architect, Systems, UX, Technical Art, Audio, Validation | Ownership conflicts, taste/fun acceptance |
+| Feature, slice, prototype, or candidate needs checking | `evaluate.md` + validation activity | Integration, Blind Spot Reviewer, Documentation Curator | Fun, feel, clarity, pacing, taste, slice acceptance |
 | Bug, observation, failed expectation, or review issue | `ticket.md` / `//ticket` | Validation Agent | Missing reproduction/evidence/impact and ticket severity |
 | No local user profile exists | `/create-profile` | Profile Creator | Confirm generated profile before writing the local file |
 | Profile no longer matches observed needs | `/review-profile` | Profile Reviewer | Accept, reject, or defer suggested profile updates |
@@ -140,7 +140,7 @@ flowchart TD
 
 ## Review and handoff rules
 
-Run `blind-spot-reviewer` at the meaningful gates: after concept, document selection, architecture, art/UX direction, pre-production, slices, before execution, and before release. Put local notes in the reviewed document; put cross-domain or release reviews in `/docs/reviews/`, creating that folder and its index on demand.
+Run `blind-spot-reviewer` at the meaningful gates: after concept, document selection, architecture, art/UX direction, the Design plan, before Implement, and before release. Put local notes in the reviewed document; put cross-domain or release reviews in `/docs/reviews/`, creating that folder and its index on demand.
 
 Every handoff should identify completed work, source-of-truth documents, changed files, decisions, assumptions, deviations, risks, human decisions, and the recommended next step. The workflow or subagent creating a document must create its missing domain folder and `README.md` index; the Documentation Curator should update affected folder indexes whenever documents are created or re-scoped.
 

@@ -53,16 +53,19 @@ meaning of playtest results. Use the decision states from
 
 ## Stage boundaries
 
-- Concept may recommend Design, but does not create implementation tasks as if
-  the direction were approved.
-- Design may prepare requirements, technical plans, asset requirements,
-  coding conventions, validation plans, and slices, but does not implement
-  production code.
-- Implement consumes an approved task or plan and does not change behavior,
-  architecture, scope, or quality targets without escalation.
-- Evaluate may accept, reject, ticket, or recommend returning to Concept,
-  Design, or Implement. It does not silently fix failed work while evaluating
-  it.
+- Concept clarifies direction, pillars, scope, and open questions. It may
+  recommend Design, but does not create implementation tasks as if the
+  direction were approved.
+- Design prepares requirements, technical plans, prototypes, asset
+  requirements, coding conventions, validation plans, and slices, but does not
+  implement production code.
+- Implement consumes an approved task or plan and owns implementation and
+  integration. It does not change behavior, architecture, scope, or quality
+  targets without escalation.
+- Evaluate owns validation, playtesting, acceptance, ticketing, and iteration
+  recommendations. It may accept, reject, ticket, or recommend returning to
+  Concept, Design, or Implement. It does not silently fix failed work while
+  evaluating it.
 
 ## Handoff
 

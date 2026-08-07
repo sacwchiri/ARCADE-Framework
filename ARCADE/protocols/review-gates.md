@@ -11,9 +11,8 @@ every gate or infer a profile change from a single task.
 - After document selection
 - After technical architecture
 - After art/UX direction
-- After pre-production plan
-- After production slices
-- Before production execution
+- After the Design plan
+- Before Implement begins
 - Before release
 
 ## Review placement

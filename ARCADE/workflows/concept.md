@@ -34,7 +34,7 @@ source-of-truth documents:
 - game pillars
 - visual direction, after reviewing a basic visual candidate when visual identity matters
 - scope boundaries
-- whether the concept should proceed to pre-production
+- whether the concept should proceed to Design
 
 ## Outputs
 
@@ -78,7 +78,7 @@ not present an untested written style as an approved visual direction.
 
 - The concept can be explained in one paragraph.
 - Major pillars are clear.
-- Scope boundaries are clear enough for pre-production.
+- Scope boundaries are clear enough for Design.
 - Open questions are listed.
 - Human decision points are explicit.
 - If visual identity matters, the human has reviewed basic visual evidence and

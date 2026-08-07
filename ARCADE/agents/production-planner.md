@@ -1,5 +1,5 @@
 ---
-description: Converts approved concepts and pre-production plans into playable slices, milestones, dependencies, and task breakdowns.
+description: Converts approved concepts and design plans into playable slices, milestones, dependencies, and task breakdowns.
 mode: subagent
 color: "#15ab65"
 temperature: 0.2
@@ -105,11 +105,9 @@ Before acting, classify the request by scale:
 And by workflow state:
 
 - Concept
-- Pre-production
-- Production planning
-- Production execution
-- Integration
-- Validation
+- Design
+- Implement
+- Evaluate
 
 Use existing documentation as source of truth. Do not silently overwrite another domain's decisions.
 

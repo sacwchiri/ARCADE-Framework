@@ -1,7 +1,7 @@
 # Workflow: Status
 
-Use this workflow to determine where the project is in the ARCADE development
-lifecycle and what should happen next.
+Use this workflow to determine which primary agent should handle the current
+work and what should happen next.
 
 ## Goal
 
@@ -13,8 +13,9 @@ project decisions.
 1. Inspect the relevant `docs/*/README.md` indexes and current project
    documents. If `docs/` is missing, report the project as documentation
    uninitialized and continue without creating files.
-2. Check for concept, pre-production, slice, implementation, integration,
-   validation, ticket, and documentation records.
+2. Check for concept, design, implementation, evaluation, ticket, and
+   documentation records. Treat planning, integration, and validation records
+   as evidence within those primary stages, not as separate stages.
 3. Identify the latest approved decision and any explicit human gate still open.
 4. Report missing evidence separately from confirmed state.
 5. Recommend exactly one next workflow. When the next step depends on an
